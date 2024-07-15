@@ -1,68 +1,86 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
+    
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+body{
+    background-color: #f5f5f5;
+    background-image: url(./image/img-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+a{
+    font-family: "Josefin Sans", sans-serif;
+    text-decoration: none;
+    color: #006666;
+    font-size: 25px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.svg-fechar{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    color: aliceblue;
+    cursor: pointer;
+    transition: 0.5s;
   }
-  a:hover {
-    color: #747bff;
+  
+  .svg-fechar:hover{
+    transform: rotate(-80deg);
   }
-  button {
-    background-color: #f9f9f9;
+  
+  
+.svg-fechar{
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    color: aliceblue;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
   }
-}
+  
+  .svg-fechar:hover{
+    transform: rotate(-80deg);
+  }
+  
+  
+  .svg-abrir{
+    width: 30px;
+    height: 30px;
+    color: #006666;
+    cursor: pointer;
+    transition: 0.5s;
+    display: none;
+  }
+
+ 
+  
+  h1{
+    color: aliceblue;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+
+  @media screen and (max-width:770px){
+    .svg-abrir{
+        display: flex;
+    }
+    a{
+        display: none;
+    }
+
+    body{
+        background-image: none;
+        background-color: #f5f5f5; 
+        transition: 1s;
+    }
+  }
