@@ -13,13 +13,6 @@ body{
   
 }
 
-a{
-    font-family: "Josefin Sans", sans-serif;
-    text-decoration: none;
-    color: #006666;
-    font-size: 25px;
-}
-
 
 
 .svg-fechar{
@@ -74,13 +67,11 @@ a{
     .svg-abrir{
         display: flex;
     }
-    a{
-        display: none;
-    }
+ 
 
     body{
         background-image: none;
-        background-color: #f5f5f5; 
+        background-color: #006666; 
         transition: 1s;
     }
   }

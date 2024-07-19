@@ -1,10 +1,12 @@
 import { styled } from "styled-components";
 
 export const Cores = {
-    cianoEcuro:'#006666',
+    cianoMedio:'#006666',
     cianoClaro:'#008584',
     branco:'#f5f5f5',
-    cinza: '#cccccc'
+    cinza: '#cccccc',
+    cianoEscuro:'#005555',
+    cianoExtraEscuro: '#004141'
 
 
 }
@@ -44,7 +46,24 @@ export const Logo = styled.img`
 height: 60px;
 width: 160px;
 padding: 25px;
+display: flex;
+
+@media screen and (max-width:770px){
+   display: none;
+  }
 `
+export const LogoMobile = styled.img`
+height: 60px;
+width: 60px;
+padding: 25px;
+display: none;
+
+@media screen and (max-width:770px){
+   display: flex;
+  }
+
+`
+
 
 export const ContainerNav = styled.div`
 height:100vh;
