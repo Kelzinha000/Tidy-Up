@@ -1,6 +1,6 @@
 import React from "react";
 import {FaTimes} from "react-icons/fa";
-import {ContainerNav, Content, Logo} from "../styled/App.js"
+import {ContainerNav, Content, Logo} from "../styled/Header.js"
 import imgLogoBranca from "../image/Logo-TidyUp-branca.png"
 
 const MenuMobile = ({active}) => {
