@@ -14,7 +14,7 @@ export const Cores = {
 
 export const Rodape = styled.footer`
 background-color: ${Cores.cianoClaro};
-height: 300px;
+height: 250px;
 width: 100;
 padding: 15px;
 display: flex;
@@ -23,7 +23,7 @@ flex-direction: column;
 
 export const BoxFooter = styled.div`
 background-color: ${Cores.cianoEscuro};
-height: 250px;
+height: 200px;
 border-radius: 15px;
 justify-content: space-around;
 display: flex;
@@ -53,6 +53,10 @@ export const LinksSocial = styled.a`
 export const ImgIconsSocial = styled.img`
 height: 35px;
 padding: 10px;
+transition: 0.5s;
+&:hover{
+  transform: scale(1.1);
+}
 `
 
 export const TextFooter = styled.h3`
