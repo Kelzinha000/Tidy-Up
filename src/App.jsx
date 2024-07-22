@@ -1,6 +1,7 @@
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Login from "./Login/Login";
+import Card from "./Card/Card";
 
 const App = () => {
   return(
@@ -8,7 +9,9 @@ const App = () => {
 
     <Header/>
     <Login/>
+    <Card/>
     <Footer/>
+    
     
     </>
   )
