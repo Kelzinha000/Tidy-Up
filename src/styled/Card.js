@@ -20,6 +20,17 @@ max-height: 500px;
 border-radius:20px;
 box-shadow:10px 10px 50px ${Cores.cinzaSombra};
 overflow: hidden;
+transition: 0.5s;
+&:hover{
+    transform: scale(1.02);
+}
+@media screen and (max-width:770px){
+   flex-direction: column;
+   gap: 100px;
+   &:hover{
+    transform: scale(1);
+   }
+  }
 `
 
 export const BoxInfoCard = styled.div`
