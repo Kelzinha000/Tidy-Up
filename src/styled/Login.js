@@ -18,6 +18,7 @@ justify-content: space-around;
 align-items: center;
 margin-top: 90px;
 margin-bottom: 50px;
+padding: 30px;
 @media screen and (max-width:1030px){
    flex-direction: column;
   }

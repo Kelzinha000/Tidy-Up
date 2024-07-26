@@ -1,18 +1,17 @@
 import {BoxCard,BoxInfoCard,ImgCard,BoxImgCard,TituleCard,ConteudoCard,TextCard } from '../styled/Card.js'
 
-import ImageCard from '../image/Ilustration/Img-Card1.png'
 
-const Card = ({tituloCard, textoCard}) => {
+const Card = ({tituloCard, textoCard,imagemCard}) => {
     return(
         <>
         <BoxCard>
             <ConteudoCard>
                 <BoxImgCard>
-                    <ImgCard src={ImageCard} alt="" />
+                    <ImgCard src={imagemCard}alt="" />
                 </BoxImgCard>
                 <BoxInfoCard>
-                    <TituleCard>Login</TituleCard>
-                    <TextCard>Faça login e matenha suas atividades atualizadas para análise do seu supervisor </TextCard>
+                    <TituleCard>{tituloCard}</TituleCard>
+                    <TextCard>{textoCard}</TextCard>
                 </BoxInfoCard>
             </ConteudoCard>
         </BoxCard>

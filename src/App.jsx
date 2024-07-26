@@ -1,7 +1,7 @@
 import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Login from "./Login/Login";
-import Card from "./Card/Card";
+import Section02 from "./Setion02/Section02";
 
 const App = () => {
   return(
@@ -9,7 +9,7 @@ const App = () => {
 
     <Header/>
     <Login/>
-    <Card/>
+    <Section02/>
     <Footer/>
     
     
