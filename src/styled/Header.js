@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
 
 export const Cores = {
-    cianoMedio:'#006666',
-    cianoClaro:'#008584',
-    branco:'#f5f5f5',
+    cianoMedio: '#006666',
+    cianoClaro: '#008584',
+    branco: '#f5f5f5',
     cinza: '#cccccc',
-    cianoEscuro:'#005555',
+    cianoEscuro: '#005555',
     cianoExtraEscuro: '#004141'
 
 
@@ -16,10 +16,13 @@ display: flex;
 gap: 70px;
 padding: 30px;
 justify-content:center;
+// position:fixed;
+// top:0;
+// z-index:99;
 `
 export const Nav = styled.nav`
 background-color: ${Cores.branco};
-box-shadow: 4px 4px 10px #0000005a ;
+box-shadow: 4px 4px 10px #0000008a ;
 border: ${Cores.cinza} 1px solid;
 height: 70px;
 width: 1299px;

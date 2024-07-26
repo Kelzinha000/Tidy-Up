@@ -1,14 +1,14 @@
 import { styled } from "styled-components";
 
 export const Cores = {
-    cianoMedio:'#006666',
-    cianoClaro:'#008584',
-    branco:'#f5f5f5',
+    cianoMedio: '#006666',
+    cianoClaro: '#008584',
+    branco: '#f5f5f5',
     cinza: '#cccccc',
-    cianoEscuro:'#005555',
+    cianoEscuro: '#005555',
     cianoExtraEscuro: '#004141',
     AzulClaro: '#CBF8FB',
-    cinzaSombra:'#0000009c'
+    cinzaSombra: '#0000009c'
 
 
 }
@@ -17,10 +17,12 @@ export const BoxCard = styled.div`
 background-color: ${Cores.AzulClaro};
 max-width: 400px;
 max-height: 500px;
+min-width:350px;
 border-radius:20px;
 box-shadow:10px 10px 50px ${Cores.cinzaSombra};
 overflow: hidden;
 transition: 0.5s;
+margin: 20px;
 &:hover{
     transform: scale(1.02);
 }
@@ -39,6 +41,8 @@ align-items: center;
 display: flex;
 flex-direction: column;
 padding-bottom: 25px;
+
+
 `
 
 export const ImgCard = styled.img`
@@ -56,6 +60,9 @@ text-align: center;
 font-size: 45px ;
 font-family: "Josefin Sans", sans-serif;
 padding: 35px;
+@media screen and (max-width:770px){
+    font-size: 35px;
+     }
 `
 
 export const ConteudoCard = styled.div`
@@ -64,9 +71,10 @@ export const ConteudoCard = styled.div`
 
 export const TextCard = styled.div`
 color: ${Cores.branco};
-width: 350px;
-font-size: 24px;
+font-size: 20px;
+width:250px;
 text-align: center;
 font-family: "Josefin Sans", sans-serif;
 font-weight: 400;
+
 `

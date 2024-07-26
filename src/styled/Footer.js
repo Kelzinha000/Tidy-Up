@@ -1,12 +1,12 @@
 import { styled } from "styled-components";
 
 export const Cores = {
-    cianoMedio:'#006666',
-    cianoClaro:'#008584',
-    branco:'#f5f5f5',
-    cinza: '#cccccc',
-    cianoEscuro:'#005555',
-    cianoExtraEscuro: '#004141'
+  cianoMedio: '#006666',
+  cianoClaro: '#008584',
+  branco: '#f5f5f5',
+  cinza: '#cccccc',
+  cianoEscuro: '#005555',
+  cianoExtraEscuro: '#004141'
 
 
 }
@@ -19,6 +19,7 @@ width: 100;
 padding: 15px;
 display: flex;
 flex-direction: column;
+margin-top: 100px;
 `
 
 export const BoxFooter = styled.div`
