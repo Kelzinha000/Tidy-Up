@@ -7,7 +7,7 @@ import { Section2 } from '../styled/Section02.js'
 
 const Section02 = ({ tituloCard, textoCard, imagemCard }) => {
     return (
-        <Section2>
+        <Section2 id="Section-02">
             <Card tituloCard="Login" textoCard="Faça login e matenha suas atividades atualizadas para análise do seu supervisor." imagemCard={ImageLogin} />
 
             <Card tituloCard="Crie relatórios" textoCard="Crie relatórios diários de maneira fácil  sobre os ambientes higienizados." imagemCard={ImageCrie} />

@@ -1,4 +1,4 @@
-import { Nav, Logo, LogoBox, HeaderNav, LogoMobile } from "../styled/Header.js";
+import { Nav, Logo, LogoBox, HeaderNav, LogoMobile, LinksNav } from "../styled/Header.js";
 import logoImg from '../image/Logo-TidyUp.png'
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
@@ -15,10 +15,16 @@ const Header = () => {
     return (
         <HeaderNav>
             <LogoBox>
-                <Logo src={logoImg} alt="Logo Tidy Up" />
-                <LogoMobile src={logoMobile} alt="Logo Tidy Up" />
+                <a href="#">
+                    <Logo src={logoImg} alt="Logo Tidy Up" />
+                    <LogoMobile src={logoMobile} alt="Logo Tidy Up" />
+                </a>
             </LogoBox>
             <Nav>
+                <LinksNav href="#">Home</LinksNav>
+                <LinksNav href="#Section-02">Sobre</LinksNav>
+                <LinksNav href="#footer">Contato</LinksNav>
+                <LinksNav href="#">Login</LinksNav>
                 <FaBars className="svg-abrir" onClick={mostrarMenu} />
                 {menumobile && <MenuMobile active={setMenumobile} />}
             </Nav>

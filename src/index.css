@@ -6,6 +6,10 @@
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f5f5f5;
   background-image: url(./image/img-background.png);
@@ -66,13 +70,18 @@ h1 {
 
 
 @media screen and (max-width:770px) {
-  .svg-abrir {
-    display: flex;
-  }
+
 
 
   body {
     background-image: none;
     background-color: #006666;
+  }
+}
+
+
+@media screen and (max-width:950px) {
+  .svg-abrir {
+    display: flex;
   }
 }

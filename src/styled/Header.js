@@ -6,7 +6,8 @@ export const Cores = {
     branco: '#f5f5f5',
     cinza: '#cccccc',
     cianoEscuro: '#005555',
-    cianoExtraEscuro: '#004141'
+    cianoExtraEscuro: '#004141',
+    cinzaEscuro: '#404040'
 
 
 }
@@ -15,10 +16,11 @@ export const HeaderNav = styled.header`
 display: flex;
 gap: 70px;
 padding: 30px;
-justify-content:center;
-// position:fixed;
-// top:0;
-// z-index:99;
+position:sticky;
+top:0;
+justify-content: center;
+z-index:99;
+
 `
 export const Nav = styled.nav`
 background-color: ${Cores.branco};
@@ -30,8 +32,9 @@ border-radius: 10px;
 display: flex;
 align-items: center;
 justify-content: end;
-gap: 40px;
+gap: 60px;
 padding-right: 60px;
+
 
 `
 
@@ -51,7 +54,7 @@ width: 160px;
 padding: 25px;
 display: flex;
 
-@media screen and (max-width:770px){
+@media screen and (max-width:950px){
    display: none;
   }
 `
@@ -61,7 +64,7 @@ width: 60px;
 padding: 25px;
 display: none;
 
-@media screen and (max-width:770px){
+@media screen and (max-width:950px){
    display: flex;
   }
 
@@ -89,11 +92,71 @@ animation: mostrarnavbar .4s;
     }
 }
 
-@media screen and (max-width:770px){
+@media screen and (max-width:950px){
    display: flex;
   }
 `
-export const Content = styled.div`
-margin-top:100px`
+export const ContentLinks = styled.div`
+width: 100;
+margin-top:100px;
+display: flex;
+flex-direction: column;
+gap: 20px;
+`
+
+
+export const LinksNavMobile = styled.a`
+width: 100vh;
+color: ${Cores.branco};
+text-decoration: none;
+font-family: "Josefin Sans", sans-serif;
+font-size: 25px;
+padding: 15px;
+`
+
+export const LinksNav = styled.a`
+color: ${Cores.cianoEscuro};
+text-decoration: none;
+font-family: "Josefin Sans", sans-serif;
+font-size: 25px;
+@media screen and (max-width:950px){
+   display: none;
+  }
+
+  &::after{
+    content:"";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: ${Cores.cianoClaro};
+    transition: .3s ease-out;
+  }
+
+  &:hover::after{
+    width: 100%;
+  }
+
+  &:hover{
+    color: ${Cores.cinzaEscuro};
+    }
+`
+
+export const BoxLink = styled.div`
+align-items: center;
+padding: 15px;
+transition: .2s;
+width: 100vh;
+border-radius: 0 0 0 20px;
+&:hover{
+    background-color: ${Cores.cianoEscuro};
+    color: ${Cores.cinza};
+}
+`
+
+export const IconsNav = styled.img`
+height: 23px;
+width: 23px;
+`
+
 
 

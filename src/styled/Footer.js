@@ -36,7 +36,23 @@ align-items: center;
 
 `
 export const BoxNav = styled.div`
-
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 10px;
+padding: 10px;
+`
+export const LinksFooter = styled.a`
+color: ${Cores.cinza};
+text-decoration: none;
+font-family: "Josefin Sans", sans-serif;
+font-size: 15px;
+@media screen and (max-width:950px){
+ display: none;
+  }
+  &:hover{
+    color: ${Cores.cinzaEscuro};
+    }
 `
 export const SocialMidia = styled.div`
 background-color: ${Cores.cianoExtraEscuro};
@@ -66,5 +82,19 @@ text-align: center;
 font-size: 20px;
 font-family: "Josefin Sans", sans-serif;
 font-weight: 500;
-padding: 25px;
+padding-top: 20px;
+@media screen and (max-width:950px){
+ display: none;
+  }
 `
+
+export const CopyRigth = styled.h3`
+color: ${Cores.branco};
+text-align: center;
+font-size: 20px;
+font-family: "Josefin Sans", sans-serif;
+font-weight: 500;
+padding-top: 20px;
+`
+
+
