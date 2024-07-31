@@ -10,6 +10,7 @@ const App = () => {
       <Login />
       <Section02 />
       <Footer />
+      
     </>
   )
 }
