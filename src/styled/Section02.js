@@ -14,7 +14,7 @@ export const Cores = {
 
 export const Section2 = styled.section`
 margin-top: 90px;
-padding: 50px;
+padding: 80px;
 background-color: ${Cores.cinzaSombra};
 display: flex;
 flex-direction: row;

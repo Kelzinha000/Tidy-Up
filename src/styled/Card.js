@@ -17,7 +17,7 @@ export const BoxCard = styled.div`
 background-color: ${Cores.AzulClaro};
 max-width: 400px;
 max-height: 500px;
-min-width:350px;
+min-width: 300px;
 border-radius:20px;
 box-shadow:10px 10px 50px ${Cores.cinzaSombra};
 overflow: hidden;
@@ -51,8 +51,11 @@ height:285px;
 `
 
 export const BoxImgCard = styled.div`
-max-width: 400px;
+width: 400px;
 overflow: hidden;
+@media screen and (max-width:770px){
+  height: 250px;
+  }
 `
 
 export const TituleCard = styled.h1`
