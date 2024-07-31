@@ -10,7 +10,7 @@ const Section02 = ({ tituloCard, textoCard, imagemCard }) => {
         <Section2 id="Section-02">
             <Card tituloCard="Login" textoCard="Faça login e matenha suas atividades atualizadas para análise do seu supervisor." imagemCard={ImageLogin} />
 
-            <Card tituloCard="Crie relatórios" textoCard="Crie relatórios diários de maneira fácil  sobre os ambientes higienizados." imagemCard={ImageCrie} />
+            <Card tituloCard="Crie relatórios" textoCard="Crie relatórios diários de maneira fácil sobre os ambientes higienizados." imagemCard={ImageCrie} />
 
             <Card tituloCard="Envie" textoCard="Envie os relatórios para seu supervisor com apenas um clique." imagemCard={ImageEnvie} />
         </Section2>

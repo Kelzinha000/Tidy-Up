@@ -7,7 +7,8 @@ export const Cores = {
     cinza: '#cccccc',
     cianoEscuro: '#005555',
     cianoExtraEscuro: '#004141',
-    cinzaEscuro: '#404040'
+    cinzaEscuro: '#404040',
+    cinzaSombra: '#0000005c'
 
 
 }
@@ -54,8 +55,9 @@ width: 160px;
 padding: 25px;
 display: flex;
 
+
 @media screen and (max-width:950px){
-   display: none;
+  display: none;
   }
 `
 export const LogoMobile = styled.img`
@@ -67,6 +69,15 @@ display: none;
 @media screen and (max-width:950px){
    display: flex;
   }
+
+`
+
+export const LogoNavMobile = styled.img`
+height: 60px;
+width: 160px;
+padding: 25px;
+position: fixed;
+bottom: 0;
 
 `
 
@@ -96,6 +107,15 @@ animation: mostrarnavbar .4s;
    display: flex;
   }
 `
+export const BackgroundNavMobile = styled.div`
+background-color: ${Cores.cinzaSombra};
+width: 100vh;
+height: 100vh;
+position: fixed;
+z-index: 70;
+top: 0;
+`
+
 export const ContentLinks = styled.div`
 width: 100;
 margin-top:100px;
@@ -157,6 +177,8 @@ export const IconsNav = styled.img`
 height: 23px;
 width: 23px;
 `
+
+
 
 
 

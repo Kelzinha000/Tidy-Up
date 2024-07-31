@@ -1,6 +1,6 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
-import { ContainerNav, ContentLinks, Logo, LinksNavMobile, BoxLink, IconsNav } from "../styled/Header.js"
+import { ContainerNav, ContentLinks, LogoNavMobile, LinksNavMobile, BoxLink, IconsNav , BackgroundNavMobile } from "../styled/Header.js"
 import imgLogoBranca from "../image/Logo-TidyUp-branca.png"
 import IconHome from "../image/Icons/IconHome.png"
 import IconSobre from "../image/Icons/IconSobre.png"
@@ -13,7 +13,9 @@ const MenuMobile = ({ active }) => {
     }
 
     return (
-        <ContainerNav menumobile={active} onClick={fecharMenu} >
+        <BackgroundNavMobile  onClick={fecharMenu}>
+        <ContainerNav menumobile={active}>
+         
             <FaTimes className="svg-fechar" />
             <ContentLinks>
                 <BoxLink>
@@ -32,10 +34,14 @@ const MenuMobile = ({ active }) => {
                     <IconsNav src={IconLogin} alt="" />
                     <LinksNavMobile href="#">Login</LinksNavMobile>
                 </BoxLink>
+          
+                   
+                <LogoNavMobile src={imgLogoBranca} alt="" />
 
-                <Logo src={imgLogoBranca} alt="" />
             </ContentLinks>
+            
         </ContainerNav>
+        </BackgroundNavMobile>
     )
 }
 
