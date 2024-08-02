@@ -1,22 +1,17 @@
-import Header from "./Header/Header";
-import Footer from "./Footer/Footer";
-import Login from "./Login/Login";
-import Section02 from "./Setion02/Section02";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Cadastro from "../src/pages/cadastro/cadastro.jsx"
+import Cadastro from "./pages/cadastro/cadastro.jsx";
+import Login from "./pages/Login/Login.jsx";
+
+
 const App = () => {
   return (
     <>
-    <BrowserRouter>
-    <Routes>
-   <Route path="/cadastro" element={<Cadastro/>}/>
-    </Routes>
-    </BrowserRouter>
-      <Header />
-      <Login />
-      <Section02 />
-      <Footer />
-      
+      <BrowserRouter>
+        <Routes>
+          <Route path='/cadastro' element={<Cadastro/>} />
+          <Route path='/' element={<Login/>} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

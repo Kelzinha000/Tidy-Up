@@ -58,7 +58,6 @@ const Login = () => {
           {user == null ? (
             <>
               <div className="login-form" />
-        
               <FormularioLogin className="formulario">
               <TituloContainer>Login</TituloContainer>
                 <InputLogin

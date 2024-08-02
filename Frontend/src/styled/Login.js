@@ -7,7 +7,7 @@ export const Cores = {
   cinza: '#cccccc',
   cianoEscuro: '#005555',
   cianoExtraEscuro: '#004141',
-  cinzaSombra: '#0000005c',
+  cinzaSombra: '#0000009c',
   vermelhoError:'#cc1818'
 
 
@@ -78,6 +78,9 @@ border:  none;
 border-bottom: solid 3px ${Cores.cianoClaro};
 outline:0;
 background-color: transparent;
+font-family: "Josefin Sans", sans-serif;
+font-weight: 200;
+font-size: 15px;
 `
 
 export const BotaoEntrar = styled.button`
@@ -87,7 +90,7 @@ export const BotaoEntrar = styled.button`
  border: none;
  padding: 15px;
  border-radius: 30px;
- font-size: 15px;
+ font-size: 20px;
  transition: 5s;
  &:hover{
   background-image: linear-gradient(to right, ${Cores.cinza}, ${Cores.cinzaSombra}); 

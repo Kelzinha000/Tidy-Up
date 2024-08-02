@@ -5,7 +5,6 @@ import { FaBars } from "react-icons/fa";
 import MenuMobile from './MenuMobile.jsx';
 import logoMobile from '../image/LogoTidyUp-mobile.png'
 
-
 const Header = () => {
     const [menumobile, setMenumobile] = useState(false)
 
@@ -14,12 +13,13 @@ const Header = () => {
     }
     return (
         <HeaderNav>
-            <LogoBox>
+            <LogoBox> 
                 <a href="#">
                     <Logo src={logoImg} alt="Logo Tidy Up" />
                     <LogoMobile src={logoMobile} alt="Logo Tidy Up" />
                 </a>
             </LogoBox>
+       
             <Nav>
                 <LinksNav href="#">Home</LinksNav>
                 <LinksNav href="#Section-02">Sobre</LinksNav>
