@@ -1,30 +1,21 @@
 import ImageHome from "../image/Ilustration/img-LoginHome.png";
-import { ImgHomeStyle,ErroLogin, ContainerLogin, Section1, TituloContainer,BotaoEntrar, InputLogin, FormularioLogin} from "../styled/Login";
+import { ImgHomeStyle, ErroLogin, ContainerLogin, Section1, TituloContainer, BotaoEntrar, InputLogin, FormularioLogin } from "../styled/Login";
 import { useState } from "react";
 import axios from "axios";
 import { AiFillExclamationCircle } from "react-icons/ai";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-// import { useNavigate} from "react-router-dom"
-import Cadastro from "../pages/Cadastro/cadastro";
-
-
+import { useNavigate} from "react-router-dom"
 
 const Login = () => {
-
-  // const goCadatro = () => {
-  //   useNavigate("/cadastro")
-  // }
-
-  entrarCadastro
-
   const [cpf, setCpf] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [user, setUser] = useState(null);
 
+  const navigate = useNavigate()
+
   const handleLogin = async (event) => {
     event.preventDefault();
-
+    
     try {
       const response = await axios.post(
         "http://localhost:3000",
@@ -32,24 +23,28 @@ const Login = () => {
         {
           headers: { "Content-Type": "application/json" },
         }
-        
+
       );
-      
       setUser(response.data);
+
+      return navigate("/cadastro")
+
       
+
 
 
     } catch (error) {
       if (!error?.response) {
         setError("Erro ao acessar o site");
       } else if (error.response.status === 401) {
-        setError(" Usuário ou senha inválidos", );
+        setError(" Usuário ou senha inválidos",);
       }
       // else{
       //   goCadatro()
       // }
-    }
 
+    }
+    
   };
 
   return (
@@ -64,7 +59,7 @@ const Login = () => {
             <>
               <div className="login-form" />
               <FormularioLogin className="formulario">
-              <TituloContainer>Login</TituloContainer>
+                <TituloContainer>Login</TituloContainer>
                 <InputLogin
                   type="text"
                   name="cpf"
@@ -89,15 +84,11 @@ const Login = () => {
                   Entrar
                 </BotaoEntrar>
               </FormularioLogin>
-              
+
             </>
           ) : (
             <div>Teste {user.cpf}
-            <Router>
-              <Routes>
-                <Route path="/cadastro" element={Cadastro}/>
-              </Routes>
-            </Router>
+
             </div>
           )}
         </div>

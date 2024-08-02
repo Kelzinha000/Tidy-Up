@@ -21,7 +21,7 @@ const Header = () => {
             </LogoBox>
        
             <Nav>
-                <LinksNav href="#">Home</LinksNav>
+                <LinksNav href="">Home</LinksNav>
                 <LinksNav href="#Section-02">Sobre</LinksNav>
                 <LinksNav href="#footer">Contato</LinksNav>
                 <LinksNav href="#">Login</LinksNav>
