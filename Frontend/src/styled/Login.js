@@ -7,7 +7,8 @@ export const Cores = {
   cinza: '#cccccc',
   cianoEscuro: '#005555',
   cianoExtraEscuro: '#004141',
-  cinzaSombra: '#0000005c'
+  cinzaSombra: '#0000005c',
+  vermelhoError:'#cc1818'
 
 
 }
@@ -63,6 +64,40 @@ color: ${Cores.cianoMedio};
 font-family: "Josefin Sans", sans-serif;
 text-align: center;
 font-size: 38px;
-padding: 60px;
+`
 
+export const FormularioLogin = styled.form`
+display: flex;
+flex-direction: column;
+padding: 50px;
+gap: 20px;
+`
+export const InputLogin = styled.input`
+height: 45px;
+border:  none;
+border-bottom: solid 3px ${Cores.cianoClaro};
+outline:0;
+background-color: transparent;
+`
+
+export const BotaoEntrar = styled.button`
+ background-image: linear-gradient(to right,${Cores.cianoClaro}, ${Cores.cianoEscuro}); 
+ color: ${Cores.branco};
+ font-family: "Josefin Sans", sans-serif;
+ border: none;
+ padding: 15px;
+ border-radius: 30px;
+ font-size: 15px;
+ transition: 5s;
+ &:hover{
+  background-image: linear-gradient(to right, ${Cores.cinza}, ${Cores.cinzaSombra}); 
+ }
+`
+
+export const ErroLogin = styled.p`
+color: ${Cores.vermelhoError};
+font-family: "Josefin Sans", sans-serif;
+display: flex;
+align-items: center;
+gap: 5px;
 `

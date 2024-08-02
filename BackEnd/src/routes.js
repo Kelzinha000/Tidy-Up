@@ -17,6 +17,14 @@ const users = [
 routes.post("/", (request, response) => {
   const { cpf, password } = request.body;
 
+  // if(!cpf){
+  //   return response.status(400).json({ message: "O CPF é obrigatório" });
+  //  }
+
+  //  if(!password){
+  //   return response.status(400).json({ message: "A senha é obrigatória" });
+  //  }
+  
   const user = users.find(
     (user) => user.cpf === cpf && user.password === password
   );
@@ -25,6 +33,8 @@ routes.post("/", (request, response) => {
   if (user) {
     return response.status(200).json({ cpf, password });
   }
+
+
 
   return response.status(401).json({ message: "Usuário ou senha incorretos" });
 });
