@@ -1,11 +1,13 @@
 
-import { BoxCadastro, TituloCadastro, SubtitulooCadastro, BoxTitulo, SectionCadastro, BotaoVoltar, BoxBotaoVoltar, IconsNav} from '../../styled/cadastro.js'
+import { BoxCadastro, TituloCadastro, SubtitulooCadastro, BoxTitulo, SectionCadastro, BotaoVoltar, BoxBotaoVoltar, IconsNav} from '../../styled/Cadastro.js'
 import IconVoltar from "../../image/Icons/IconVoltar.png"
+
 
 
 const Cadastro = () => {
     return (
         <>
+
             <SectionCadastro>
            <BoxBotaoVoltar>
             <IconsNav src={IconVoltar} alt="" />
@@ -18,6 +20,7 @@ const Cadastro = () => {
                     </BoxTitulo >
                 </BoxCadastro>
             </SectionCadastro>
+    
         </>
     )
 }

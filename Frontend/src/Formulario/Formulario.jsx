@@ -3,19 +3,19 @@ import { ImgHomeStyle,ErroLogin, ContainerLogin, Section1, TituloContainer,Botao
 import { useState } from "react";
 import axios from "axios";
 import { AiFillExclamationCircle } from "react-icons/ai";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 // import { useNavigate} from "react-router-dom"
+import Cadastro from "../pages/Cadastro/cadastro";
 
 
 
 const Login = () => {
 
-
-
-
   // const goCadatro = () => {
   //   useNavigate("/cadastro")
   // }
+
+  entrarCadastro
 
   const [cpf, setCpf] = useState("");
   const [password, setPassword] = useState("");
@@ -32,8 +32,12 @@ const Login = () => {
         {
           headers: { "Content-Type": "application/json" },
         }
+        
       );
+      
       setUser(response.data);
+      
+
 
     } catch (error) {
       if (!error?.response) {
@@ -45,6 +49,7 @@ const Login = () => {
       //   goCadatro()
       // }
     }
+
   };
 
   return (
@@ -87,7 +92,13 @@ const Login = () => {
               
             </>
           ) : (
-            <div>Teste {user.cpf}</div>
+            <div>Teste {user.cpf}
+            <Router>
+              <Routes>
+                <Route path="/cadastro" element={Cadastro}/>
+              </Routes>
+            </Router>
+            </div>
           )}
         </div>
       </ContainerLogin>
