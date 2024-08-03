@@ -3,7 +3,7 @@ import { ImgHomeStyle, ErroLogin, ContainerLogin, Section1, TituloContainer, Bot
 import { useState } from "react";
 import axios from "axios";
 import { AiFillExclamationCircle } from "react-icons/ai";
-import { useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const Login = () => {
   const [cpf, setCpf] = useState("");

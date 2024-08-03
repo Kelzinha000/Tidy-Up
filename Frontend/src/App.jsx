@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Cadastro from "./pages/Cadastro/Cadastro.jsx"
+import Cadastro from "./pages/Cadastro/PagCadastro.jsx"
 import Login from "./pages/Login/Login.jsx";
 
 
