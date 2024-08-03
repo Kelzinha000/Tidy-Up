@@ -15,7 +15,6 @@ const Login = () => {
 
   const handleLogin = async (event) => {
     event.preventDefault();
-    
     try {
       const response = await axios.post(
         "http://localhost:3000",
@@ -23,15 +22,10 @@ const Login = () => {
         {
           headers: { "Content-Type": "application/json" },
         }
-
       );
       setUser(response.data);
 
       return navigate("/cadastro")
-
-      
-
-
 
     } catch (error) {
       if (!error?.response) {
@@ -39,12 +33,7 @@ const Login = () => {
       } else if (error.response.status === 401) {
         setError(" Usuário ou senha inválidos",);
       }
-      // else{
-      //   goCadatro()
-      // }
-
     }
-    
   };
 
   return (
