@@ -13,7 +13,7 @@ const Home = () => {
         <BoxRelatorio>
           <BoxConteudo>
             <LuClipboardX className="Svg-RelatorioVazio"></LuClipboardX>
-            <TextRelatorioVazio>você ainda não apresenta nenhum relatório...</TextRelatorioVazio>
+            <TextRelatorioVazio>Você ainda não apresenta nenhum relatório...</TextRelatorioVazio>
           </BoxConteudo>
         </BoxRelatorio>
       </SectionRelatorio>

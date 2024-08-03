@@ -9,7 +9,7 @@ export const Cores = {
   cianoEscuro: "#005555",
   cianoExtraEscuro: "#004141",
   cinzaSombra: "#0000005c",
-  cinzaEscuro:"#4F4F4F"
+  cinzaEscuro: "#4F4F4F"
 
 };
 
@@ -18,15 +18,16 @@ export const SectionRelatorio = styled.section`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  height: 100vh;
   align-items: center;
+  margin-top: 100px;
+
   @media screen and (max-width: 1030px) {
     flex-direction: column;
   }
 `;
 export const BoxRelatorio = styled.div`
-  width: 656px;
-  height: 773px;
+  width: 690px;
+  height: 590px;
   background: ${Cores.branco};
   border-radius: 50px;
   box-shadow: 0 4px 50px ${Cores.cinzaSombra};
@@ -59,7 +60,10 @@ gap: 20px;
 export const TextRelatorioVazio = styled.h2`
 color: ${Cores.cinzaEscuro};
 font-family: "Josefin Sans", sans-serif;
-font-size: 20px;
+font-size: 25px;
+  @media screen and (max-width: 750px) {
+   font-size:20px;
+  }
 `
 
 
