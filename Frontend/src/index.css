@@ -80,8 +80,21 @@ h1 {
 }
 
 
+
+
+.Svg-RelatorioVazio{
+  width: 250px;
+  height: 250px;
+  color:#4F4F4F;
+  padding: 20px;
+  
+}
 @media screen and (max-width:950px) {
   .svg-abrir {
     display: flex;
   }
+.Svg-RelatorioVazio{
+  width: 150px;
+  height: 150px;
+}
 }

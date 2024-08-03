@@ -25,7 +25,7 @@ const Login = () => {
       );
       setUser(response.data);
 
-      return navigate("/cadastro")
+      return navigate("/Home")
 
     } catch (error) {
       if (!error?.response) {
