@@ -56,7 +56,7 @@ padding: 25px;
 display: flex;
 
 
-@media screen and (max-width:950px){
+@media screen and (max-width:980px){
   display: none;
   }
 `
@@ -66,7 +66,7 @@ width: 60px;
 padding: 25px;
 display: none;
 
-@media screen and (max-width:950px){
+@media screen and (max-width:980px){
    display: flex;
   }
 
@@ -103,7 +103,7 @@ animation: mostrarnavbar .4s;
     }
 }
 
-@media screen and (max-width:950px){
+@media screen and (max-width:980px){
    display: flex;
   }
 `
@@ -139,7 +139,7 @@ color: ${Cores.cianoEscuro};
 text-decoration: none;
 font-family: "Josefin Sans", sans-serif;
 font-size: 25px;
-@media screen and (max-width:950px){
+@media screen and (max-width:980px){
    display: none;
   }
 
@@ -173,10 +173,7 @@ border-radius: 0 0 0 20px;
 }
 `
 
-export const IconsNav = styled.img`
-height: 23px;
-width: 23px;
-`
+
 
 
 

@@ -22,9 +22,9 @@ const Header = () => {
        
             <Nav>
                 <LinksNav href="">Home</LinksNav>
-                <LinksNav href="#Section-02">Sobre</LinksNav>
-                <LinksNav href="#footer">Contato</LinksNav>
-                <LinksNav href="#">Login</LinksNav>
+                <LinksNav href="">Criar relatório</LinksNav>
+                <LinksNav href="">Relatórios</LinksNav>
+                <LinksNav href="">Perfil</LinksNav>
                 <FaBars className="svg-abrir" onClick={mostrarMenu} />
                 {menumobile && <MenuMobile active={setMenumobile} />}
             </Nav>
