@@ -1,4 +1,4 @@
-import { BoxCadastro, TituloCadastro, SubtitulooCadastro, BoxTitulo, SectionCadastro, BotaoVoltar, BoxBotaoVoltar, IconsNav} from '../../styled/Cadastro.js'
+import { BoxCadastro, TituloCadastro, SubtitulooCadastro, BoxTitulo, SectionCadastro, BotaoVoltar, BoxBotaoVoltar, IconsNav} from '../../styled/PagCadastro.js'
 import IconVoltar from "../../image/Icons/IconVoltar.png"
 
 const Cadastro = () => {
