@@ -1,4 +1,4 @@
-import fs from 'node:fs'
+const fs = require("node:fs");
 
 const lerNovofuncionario = (callback) =>{
     fs.readFile('funcionarios.json', 'utf8', (err, data)=>{
