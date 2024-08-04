@@ -18,6 +18,10 @@ app.post('/cadastrar', (request, response)=>{
     response.send("FOIII")
 })
 
+app.post('/relatorio', (request, response)=>{
+    response.send('Testes')
+})
+
 app.listen(3000, ()=>{
     console.log('Port 3000 ON')
 });
