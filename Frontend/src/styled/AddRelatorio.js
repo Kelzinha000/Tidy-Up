@@ -7,7 +7,9 @@ export const Cores = {
     branco: '#f5f5f5',
     cinza: '#cccccc',
     cianoEscuro: '#005555',
-    cianoExtraEscuro: '#004141'
+    cianoExtraEscuro: '#004141',
+    cinzaSombra: '#0000009c',
+    vermelhoError: '#cc1818'
 }
 
 
@@ -58,7 +60,7 @@ font-size: 40px;
 export const Select = styled.select`
 color: ${Cores.cianoEscuro};
 font-family: "Josefin Sans", sans-serif;
-font-size: 35px;
+font-size: 30px;
 width: 450px;
 padding: 5px;
 margin-bottom: 10px;
@@ -66,7 +68,41 @@ border: none;
 background: transparent;
 border-bottom: 3px solid ${Cores.cianoEscuro};
 outline: 0;
-text-align: center;
+@media screen and (max-width:860px){
+font-size: 30px;
+width:350px
+}
+
+
+@media screen and (max-width:750px){
+    font-size: 25px;
+    width: 250px;
+}
+`
+export const FormularioRelatorio = styled.form`
+display: flex;
+flex-direction: column;
+gap: 35px;
+
+@media screen and (max-width:860px){
+gap: 20px
+}
+
+
+@media screen and (max-width:750px){
+    gap:10px;
+}
+`
+
+export const Date = styled.input`
+color: ${Cores.cianoEscuro};
+border: none;
+border-bottom: 3px solid ${Cores.cianoEscuro};
+padding: 5px;
+font-size: 30px;
+font-family: "Josefin Sans", sans-serif;
+background-color: transparent;
+outline: 0;
 @media screen and (max-width:860px){
 font-size: 30px;
 width:350px
@@ -79,3 +115,43 @@ width:350px
 }
 `
 
+export const Time = styled.input`
+color: ${Cores.cianoEscuro};
+border: none;
+border-bottom: 3px solid ${Cores.cianoEscuro};
+padding: 5px;
+font-size: 30px;
+font-family: "Josefin Sans", sans-serif;
+background-color: transparent;
+outline: 0;
+@media screen and (max-width:860px){
+font-size: 30px;
+width:350px
+}
+
+
+@media screen and (max-width:750px){
+    font-size: 25px;
+    width: 250px;
+}
+`
+
+export const BotaoCriar = styled.button`
+ background-image: linear-gradient(to right,${Cores.cianoClaro}, ${Cores.cianoEscuro}); 
+ color: ${Cores.branco};
+ font-family: "Josefin Sans", sans-serif;
+ border: none;
+ padding: 20px;
+ margin-top: 5px;
+ border-radius: 30px;
+ font-size: 25px;
+ transition: 1s;
+ &:hover{
+  background-image: linear-gradient(to right, ${Cores.cinza}, ${Cores.cinzaSombra}); 
+ 
+@media screen and (max-width:860px){
+padding: 15px;
+font-size: 20px;
+}
+}
+`

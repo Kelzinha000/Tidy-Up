@@ -1,4 +1,4 @@
-import { BoxRelatorio, SectionAddRelatorio, TituloRelatorio, Select } from '../../styled/AddRelatorio.js'
+import { BoxRelatorio, SectionAddRelatorio, TituloRelatorio, Select, FormularioRelatorio, Date , Time, BotaoCriar} from '../../styled/AddRelatorio.js'
 import Header from '../../Header/Header.jsx';
 import { IoHomeOutline } from "react-icons/io5";
 import { useState } from 'react';
@@ -37,18 +37,18 @@ const AddRelatorio = () => {
       <SectionAddRelatorio>
         <BoxRelatorio >
           <TituloRelatorio>Relatório</TituloRelatorio>
-          <form onSubmit={handleForm}>
+          <FormularioRelatorio onSubmit={handleForm}>
             <Select required value={ambiente} onChange={(event) => setAmbiente(event.target.value)}>
               <option>
                 <IoHomeOutline></IoHomeOutline>
                 Ambiente</option>
               <option>Banheiro</option>
             </Select>
-            <input type="date" name="dataRelatorio" id="dataRelatorio" required value={data} onChange={(event) => setData(event.target.value) } />
-            <input type="time" name="horaRelatorio" id="horaRelatorio" required value={hora} onChange={(event) => setHora(event.target.value)} />
-            <button type="submit">Enviar</button>
+            <Date type="date" name="dataRelatorio" id="dataRelatorio" required value={data} onChange={(event) => setData(event.target.value) } />
+            <Time type="time" name="horaRelatorio" id="horaRelatorio" required value={hora} onChange={(event) => setHora(event.target.value)} />
             <p>{error}</p>
-          </form>
+            <BotaoCriar type="submit">Enviar</BotaoCriar>
+          </FormularioRelatorio>
         </BoxRelatorio>
       </SectionAddRelatorio>
     </>
