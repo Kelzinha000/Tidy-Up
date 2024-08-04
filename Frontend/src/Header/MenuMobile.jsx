@@ -1,11 +1,12 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
-import { ContainerNav, ContentLinks, LogoNavMobile, LinksNavMobile, BoxLink, BackgroundNavMobile } from "../styled/Header.js"
+import { ContainerNav, ContentLinks, LogoNavMobile, BoxLink, BackgroundNavMobile } from "../styled/Header.js"
 import imgLogoBranca from "../image/Logo-TidyUp-branca.png"
 import { LuClipboardList } from "react-icons/lu";
 import { LuClipboardSignature } from "react-icons/lu";
 import { FaUser } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 
 const MenuMobile = ({ active }) => {
@@ -21,19 +22,19 @@ const MenuMobile = ({ active }) => {
             <ContentLinks>
                 <BoxLink>
                     <GoHomeFill className="Icons-svg"></GoHomeFill>
-                    <LinksNavMobile href="#">Home</LinksNavMobile>
+                    <Link to='/Home' className="linksNavMobile">Home</Link>
                 </BoxLink>
                 <BoxLink>
                    <LuClipboardSignature className="Icons-svg"></LuClipboardSignature>
-                    <LinksNavMobile href="#">Criar relatório</LinksNavMobile>
+                   <Link to='/addRelatorio' className="linksNavMobile">Criar relatório</Link>
                 </BoxLink>
                 <BoxLink>
                 <LuClipboardList className="Icons-svg"></LuClipboardList>
-                    <LinksNavMobile href="#">Relatórios</LinksNavMobile>
+                <Link to='' className="linksNavMobile">Relatórios</Link>
                 </BoxLink>
                 <BoxLink>
                     <FaUser className="Icons-svg"></FaUser>
-                  <LinksNavMobile href="#">Perfil</LinksNavMobile>
+                    <Link to='' className="linksNavMobile">Perfil</Link>
                 </BoxLink>
                 
           

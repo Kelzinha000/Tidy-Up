@@ -19,28 +19,25 @@ export const SectionRelatorio = styled.section`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-top: 100px;
-
   @media screen and (max-width: 1030px) {
     flex-direction: column;
   }
-`;
+`
+
 export const BoxRelatorio = styled.div`
-  width: 690px;
-  height: 590px;
+  width: 633px;
+  height: 573px;
   background: ${Cores.branco};
   border-radius: 50px;
   box-shadow: 0 4px 50px ${Cores.cinzaSombra};
   border-bottom: 20px;
   margin:34px;
 
-
   @media screen and (max-width: 860px) {
     max-width: 450px;
     max-height: 490px;
     min-width: 0;
   }
-
 
   @media screen and (max-width: 750px) {
     max-width: 340px;

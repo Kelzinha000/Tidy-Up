@@ -109,11 +109,16 @@ animation: mostrarnavbar .4s;
 `
 export const BackgroundNavMobile = styled.div`
 background-color: ${Cores.cinzaSombra};
-width: 100vh;
+width:100%;
 height: 100vh;
 position: fixed;
 z-index: 70;
 top: 0;
+display: none;
+
+@media screen and (max-width:980px){
+   display: flex;
+  }
 `
 
 export const ContentLinks = styled.div`
@@ -122,43 +127,6 @@ margin-top:100px;
 display: flex;
 flex-direction: column;
 gap: 20px;
-`
-
-
-export const LinksNavMobile = styled.a`
-width: 100vh;
-color: ${Cores.branco};
-text-decoration: none;
-font-family: "Josefin Sans", sans-serif;
-font-size: 25px;
-padding: 15px;
-`
-
-export const LinksNav = styled.a`
-color: ${Cores.cianoEscuro};
-text-decoration: none;
-font-family: "Josefin Sans", sans-serif;
-font-size: 25px;
-@media screen and (max-width:980px){
-   display: none;
-  }
-
-  &::after{
-    content:"";
-    display: block;
-    width: 0;
-    height: 3px;
-    background-color: ${Cores.cianoClaro};
-    transition: .3s ease-out;
-  }
-
-  &:hover::after{
-    width: 100%;
-  }
-
-  &:hover{
-    color: ${Cores.cinzaEscuro};
-    }
 `
 
 export const BoxLink = styled.div`

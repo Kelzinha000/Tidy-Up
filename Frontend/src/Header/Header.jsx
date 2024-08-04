@@ -1,9 +1,11 @@
-import { Nav, Logo, LogoBox, HeaderNav, LogoMobile, LinksNav } from "../styled/Header.js";
+import { Nav, Logo, LogoBox, HeaderNav, LogoMobile } from "../styled/Header.js";
 import logoImg from '../image/Logo-TidyUp.png'
 import { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import MenuMobile from './MenuMobile.jsx';
 import logoMobile from '../image/LogoTidyUp-mobile.png'
+import { Link } from "react-router-dom";
+import "../index.css"
 
 const Header = () => {
     const [menumobile, setMenumobile] = useState(false)
@@ -21,10 +23,10 @@ const Header = () => {
             </LogoBox>
        
             <Nav>
-                <LinksNav href="">Home</LinksNav>
-                <LinksNav href="">Criar relatório</LinksNav>
-                <LinksNav href="">Relatórios</LinksNav>
-                <LinksNav href="">Perfil</LinksNav>
+               <Link className="linksNav" to="/Home">Home</Link>
+                <Link className="linksNav" to='/addRelatorio'>Criar relatório</Link>
+                <Link className="linksNav" to="">Relatórios</Link>
+                <Link className="linksNav" to="">Perfil</Link>
                 <FaBars className="svg-abrir" onClick={mostrarMenu} />
                 {menumobile && <MenuMobile active={setMenumobile} />}
             </Nav>
