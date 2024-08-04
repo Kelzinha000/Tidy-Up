@@ -150,7 +150,7 @@ export const BotaoCriar = styled.button`
   background-image: linear-gradient(to right, ${Cores.cinza}, ${Cores.cinzaSombra}); 
  
 @media screen and (max-width:860px){
-padding: 15px;
+padding: 10px;
 font-size: 20px;
 }
 }
