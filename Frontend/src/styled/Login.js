@@ -17,7 +17,7 @@ display: flex;
 flex-direction: row;
 justify-content: space-around;
 align-items: center;
-margin-top: 90px;
+margin-top: 50px;
 margin-bottom: 50px;
 padding: 30px;
 @media screen and (max-width:1030px){
