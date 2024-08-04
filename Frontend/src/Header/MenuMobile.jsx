@@ -30,7 +30,7 @@ const MenuMobile = ({ active }) => {
                 </BoxLink>
                 <BoxLink>
                 <LuClipboardList className="Icons-svg"></LuClipboardList>
-                <Link to='' className="linksNavMobile">Relatórios</Link>
+                <Link to='/relatorios' className="linksNavMobile">Relatórios</Link>
                 </BoxLink>
                 <BoxLink>
                     <FaUser className="Icons-svg"></FaUser>

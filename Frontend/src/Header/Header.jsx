@@ -25,7 +25,7 @@ const Header = () => {
             <Nav>
                <Link className="linksNav" to="/Home">Home</Link>
                 <Link className="linksNav" to='/addRelatorio'>Criar relatório</Link>
-                <Link className="linksNav" to="">Relatórios</Link>
+                <Link className="linksNav" to="/relatorios">Relatórios</Link>
                 <Link className="linksNav" to="">Perfil</Link>
                 <FaBars className="svg-abrir" onClick={mostrarMenu} />
                 {menumobile && <MenuMobile active={setMenumobile} />}
