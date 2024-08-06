@@ -28,6 +28,12 @@ const Relatorios = () => {
         //    console.log(relatorios[i].ambiente)
         //    console.log(relatorios[i].ambiente)
         //    console.log(relatorios[i].hora)
+        const relatorios = response.data
+        for (let i = 0; i < data.length; i++){
+            console.log(relatorios[i].ambiente)
+            console.log(relatorios[i].data)
+            console.log(relatorios[i].hora)
+        }
 
         setAmbiente(response.data[0].ambiente)
         setData(response.data[0].data)
