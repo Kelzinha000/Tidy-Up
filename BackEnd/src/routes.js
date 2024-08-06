@@ -14,6 +14,19 @@ const users = [
   },
 ];
 
+routes.get("/relatorios", (request, response) => {
+  lerRelatorio((err, relatorios) => {
+    if (err) {
+      response.writeHead(500, { "Content-Type": "application/json" })
+      response.end(JSON.stringify({ message: "Erro ao ler relatorio" }))
+      return
+    }
+    response.writeHead(201, { "Content-Type": "application/json" });
+    response.end(JSON.stringify(relatorios));
+    return
+  })
+})
+
 routes.post("/", (request, response) => {
   const { cpf, password } = request.body;
   const user = users.find(
@@ -23,45 +36,45 @@ routes.post("/", (request, response) => {
   if (user) {
     return response.status(200).json({ cpf, password });
   }
-    return response.status(401).json({ message: "Usuário ou senha incorretos" });
+  return response.status(401).json({ message: "Usuário ou senha incorretos" });
 });
 
 
 //cadastrar relatorios
 
-routes.post("/relatorio", (request, response)=>{
+routes.post("/relatorio", (request, response) => {
   let body = request.body
   const { ambiente, data, hora } = request.body
 
-  if(!ambiente){
+  if (!ambiente) {
     return response.status(401).json({ message: "Ambiente invalido" });
   }
-  if(!data){
+  if (!data) {
     return response.status(401).json({ message: "Data invalida" });
   }
-  if(!hora){
+  if (!hora) {
     return response.status(401).json({ message: "Hora invalida" });
   }
   const novoRelatorio = body
-  lerRelatorio((err, relatorios)=>{
-    if(err){
-      response.writeHead(500 ,{"Content-Type":"application/json"})
-      response.end(JSON.stringify({message:"Erro ao ler relatorio"}))
-      return
-  }
-  
-  novoRelatorio.id = uuidv4()
-  relatorios.push(novoRelatorio)
-
-  fs.writeFile("relatorios.json", JSON.stringify(relatorios, null, 2), (err)=>{
-    if(err){
-      response.writeHead(500, {'Content-Type':'application/json'})
-      response,end(JSON({message:'Erro interno no Servidor'}))
+  lerRelatorio((err, relatorios) => {
+    if (err) {
+      response.writeHead(500, { "Content-Type": "application/json" })
+      response.end(JSON.stringify({ message: "Erro ao ler relatorio" }))
       return
     }
-    response.writeHead(201, { "Content-Type": "application/json" });
-    response.end(JSON.stringify(novoRelatorio));
-    return
+
+    novoRelatorio.id = uuidv4()
+    relatorios.push(novoRelatorio)
+
+    fs.writeFile("relatorios.json", JSON.stringify(relatorios, null, 2), (err) => {
+      if (err) {
+        response.writeHead(500, { 'Content-Type': 'application/json' })
+        response, end(JSON({ message: 'Erro interno no Servidor' }))
+        return
+      }
+      response.writeHead(201, { "Content-Type": "application/json" });
+      response.end(JSON.stringify(novoRelatorio));
+      return
     })
 
   })
@@ -95,7 +108,7 @@ routes.post("/relatorio", (request, response)=>{
 //                 response.status(500).json({ message: "Erro ao ler os dados de funcionarios" })
 //                 return
 //             }
-            
+
 //         })
 //         response.status(201).json(novoFuncionario)
 //         return
