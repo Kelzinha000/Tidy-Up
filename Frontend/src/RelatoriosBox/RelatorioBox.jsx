@@ -4,8 +4,8 @@ const RelatoriosCard = ({ambiente, date, time})=>{
     return(
 <BoxRelatorio>
     <NomeAmbiente>{ambiente}</NomeAmbiente>
-    <DateRelatorio>{date}</DateRelatorio>
-    <TimeRelatorio>{time}</TimeRelatorio>
+    <DateRelatorio>data: {date}</DateRelatorio>
+    <TimeRelatorio>horário: {time}</TimeRelatorio>
 </BoxRelatorio>
     )
 }

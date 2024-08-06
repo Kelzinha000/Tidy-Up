@@ -15,11 +15,16 @@ export const Cores = {
 export const BoxRelatorio = styled.div`
 background-color: ${Cores.branco};
 border-radius: 20px;
+height: 60px;
+width: 55%;
+padding: 20px;
+align-items: start;
 box-shadow:10px 10px 50px ${Cores.cinzaSombra};
 `
   
 export const NomeAmbiente = styled.p`
 font-family: "Josefin Sans", sans-serif;
+font-size: 25px;
 `
 
 export const TimeRelatorio = styled.p`
