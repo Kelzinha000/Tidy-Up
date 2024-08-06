@@ -75,7 +75,7 @@ width:350px
 
 
 @media screen and (max-width:750px){
-    font-size: 25px;
+    font-size: 20px;
     width: 250px;
 }
 `
@@ -110,7 +110,7 @@ width:350px
 
 
 @media screen and (max-width:750px){
-    font-size: 25px;
+    font-size: 20px;
     width: 250px;
 }
 `
@@ -131,7 +131,7 @@ width:350px
 
 
 @media screen and (max-width:750px){
-    font-size: 25px;
+    font-size: 20px;
     width: 250px;
 }
 `
@@ -148,10 +148,19 @@ export const BotaoCriar = styled.button`
  transition: 1s;
  &:hover{
   background-image: linear-gradient(to right, ${Cores.cinza}, ${Cores.cinzaSombra}); 
- 
+ }
 @media screen and (max-width:860px){
 padding: 10px;
 font-size: 20px;
 }
-}
+
+`
+
+export const ErroAddRelatorio = styled.p`
+color: ${Cores.vermelhoError};
+font-family: "Josefin Sans", sans-serif;
+font-size: 16px;
+align-items: center;
+justify-content: center;
+gap: 5px;
 `

@@ -15,26 +15,26 @@ const MenuMobile = ({ active }) => {
     }
 
     return (
-        <BackgroundNavMobile  onClick={fecharMenu}>
+        <>
         <ContainerNav menumobile={active}>
          
-            <FaTimes className="svg-fechar" />
+            <FaTimes className="svg-fechar" onClick={fecharMenu} />
             <ContentLinks>
                 <BoxLink>
-                    <GoHomeFill className="Icons-svg"></GoHomeFill>
-                    <Link to='/Home' className="linksNavMobile">Home</Link>
+                    <GoHomeFill className="Icons-svg" ></GoHomeFill>
+                    <Link to='/Home' className="linksNavMobile" onClick={fecharMenu}>Home</Link>
                 </BoxLink>
                 <BoxLink>
                    <LuClipboardSignature className="Icons-svg"></LuClipboardSignature>
-                   <Link to='/addRelatorio' className="linksNavMobile">Criar relatório</Link>
+                   <Link to='/addRelatorio' className="linksNavMobile" onClick={fecharMenu}>Criar relatório</Link>
                 </BoxLink>
                 <BoxLink>
                 <LuClipboardList className="Icons-svg"></LuClipboardList>
-                <Link to='' className="linksNavMobile">Relatórios</Link>
+                <Link to='/relatorios' className="linksNavMobile"onClick={fecharMenu}>Relatórios</Link>
                 </BoxLink>
                 <BoxLink>
                     <FaUser className="Icons-svg"></FaUser>
-                    <Link to='' className="linksNavMobile">Perfil</Link>
+                    <Link to='' className="linksNavMobile" onClick={fecharMenu}>Perfil</Link>
                 </BoxLink>
                 
           
@@ -44,7 +44,9 @@ const MenuMobile = ({ active }) => {
             </ContentLinks>
             
         </ContainerNav>
+         <BackgroundNavMobile  onClick={fecharMenu}>
         </BackgroundNavMobile>
+        </>
     )
 }
 

@@ -76,8 +76,7 @@ const Login = () => {
 
             </>
           ) : (
-            <div>Teste {user.cpf}
-
+            <div>
             </div>
           )}
         </div>
