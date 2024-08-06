@@ -6,15 +6,14 @@ const lerNovofuncionario = (callback) =>{
             callback(err)
         }
         try {
-            const funcionario = JSON.parse(data)
-            callback(null, funcionario)
+            const funcionarios = JSON.parse(data)
+            callback(null, funcionarios)
         }
         catch(error){
             callback(error)
         }
-
 })
 
 }
 
-export default lerNovofuncionario;
+module.exports = lerNovofuncionario

@@ -2,6 +2,7 @@ import Header from "../../Header/Header.jsx";
 import Footer from "../../Footer/Footer.jsx";
 import { SectionRelatorios, ConteudoRelatorio } from "../../styled/Relatorios.js";
 import BoxRelatorio from "../../RelatoriosBox/RelatorioBox.jsx";
+import { IoHomeOutline } from "react-icons/io5";
 import axios from "axios";
 import { useEffect, useState } from "react";
 

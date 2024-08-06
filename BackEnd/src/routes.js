@@ -1,7 +1,9 @@
 const express = require("express");
 const fs = require("node:fs");
 const lerRelatorio = require("./lerRelatorio.js")
+const lerNovofuncionario = require("./lerNovofuncionarios.js")
 const { v4: uuidv4 } = require("uuid");
+
 
 
 const routes = express.Router();
@@ -14,6 +16,7 @@ const users = [
   },
 ];
 
+//listar relatorios
 routes.get("/relatorios", (request, response) => {
   lerRelatorio((err, relatorios) => {
     if (err) {
@@ -26,6 +29,8 @@ routes.get("/relatorios", (request, response) => {
     return
   })
 })
+
+//rota login
 
 routes.post("/", (request, response) => {
   const { cpf, password } = request.body;
@@ -81,6 +86,46 @@ routes.post("/relatorio", (request, response) => {
 
 })
 
+
+//Rota de cadastro
+routes.post("/cadastrar", (request, response) => {
+  let body = request.body
+  const { nomeFuncionario, senhaFuncionario } = request.body
+
+  if (!nomeFuncionario) {
+    return response.status(401).json({ message: "Nome de funcionario invalido" });
+  }
+  if (!senhaFuncionario) {
+    return response.status(401).json({ message: "Senha invalida" });
+  }
+  if (!body) {
+    return response.status(401).json({ message: "Por favor, digite no corpo da requisição" });
+  }
+  const novoFuncionario = body
+  lerNovofuncionario((err, funcionarios) => {
+    if (err) {
+      response.writeHead(500, { "Content-Type": "application/json" })
+      response.end(JSON.stringify({ message: "Erro ao ler relatorio" }))
+      return
+    }
+
+    novoFuncionario.id = uuidv4()
+    funcionarios.push(novoFuncionario)
+
+    fs.writeFile("funcionarios.json", JSON.stringify(funcionarios, null, 2), (err) => {
+      if (err) {
+        response.writeHead(500, { 'Content-Type': 'application/json' })
+        response, end(JSON({ message: 'Erro interno no Servidor' }))
+        return
+      }
+      response.writeHead(201, { "Content-Type": "application/json" });
+      response.end(JSON.stringify(novoFuncionario));
+      return
+    })
+  })
+
+
+})
 
 
 //cadastro

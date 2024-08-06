@@ -1,3 +1,12 @@
 [
-    
+  {
+    "nomeFuncionario": "Raquel",
+    "senhaFuncionario": "654321",
+    "id": "03fd22bf-4433-409a-80e2-a3ab9e0c141b"
+  },
+  {
+    "nomeFuncionario": "Deyse",
+    "senhaFuncionario": "123456",
+    "id": "77fa519d-a794-471c-8fac-af258d95a3b5"
+  }
 ]

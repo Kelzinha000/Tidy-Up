@@ -1,6 +1,7 @@
-import { BoxRelatorio, SectionAddRelatorio, TituloRelatorio, Select, FormularioRelatorio, Date , Time, BotaoCriar} from '../../styled/AddRelatorio.js'
+import { BoxRelatorio, SectionAddRelatorio, TituloRelatorio, Select, FormularioRelatorio, Date, Time, BotaoCriar } from '../../styled/AddRelatorio.js'
 import Header from '../../Header/Header.jsx';
 import { IoHomeOutline } from "react-icons/io5";
+import { AiFillExclamationCircle } from "react-icons/ai";
 import { useState } from 'react';
 import axios from 'axios';
 
@@ -17,17 +18,19 @@ const AddRelatorio = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/relatorio", 
-        JSON.stringify({ ambiente, data, hora}), 
+        "http://localhost:3000/relatorio",
+        JSON.stringify({ ambiente, data, hora }),
         {
-        headers: { "Content-Type": "application/json" }
+          headers: { "Content-Type": "application/json" }
         }
       );
-      console.log(response.data)
-      
+
+
     } catch (error) {
       if (!error?.response) {
         setError("Erro ao acessar o site");
+      } else if (error.response.status === 401) {
+        setError("Campos vazios, por favor preencha-os");
       }
     }
   }
@@ -44,9 +47,9 @@ const AddRelatorio = () => {
                 Ambiente</option>
               <option>Banheiro</option>
             </Select>
-            <Date type="date" name="dataRelatorio" id="dataRelatorio" required value={data} onChange={(event) => setData(event.target.value) } />
-            <Time type="time" name="horaRelatorio" id="horaRelatorio" required value={hora} onChange={(event) => setHora(event.target.value)} />
-            <p>{error}</p>
+            <Date type="date" name="dataRelatorio" id="dataRelatorio" value={data} onChange={(event) => setData(event.target.value)} />
+            <Time type="time" name="horaRelatorio" id="horaRelatorio" value={hora} onChange={(event) => setHora(event.target.value)} />
+            <p>{error && <AiFillExclamationCircle></AiFillExclamationCircle>}{error}</p>
             <BotaoCriar type="submit">Enviar</BotaoCriar>
           </FormularioRelatorio>
         </BoxRelatorio>
