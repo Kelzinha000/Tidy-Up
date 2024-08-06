@@ -155,3 +155,13 @@ font-size: 20px;
 }
 }
 `
+
+export const ErroAddRelatorio = styled.p`
+color: ${Cores.vermelhoError};
+font-family: "Josefin Sans", sans-serif;
+font-size: 16px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 5px;
+`

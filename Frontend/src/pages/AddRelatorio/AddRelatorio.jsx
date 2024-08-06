@@ -1,8 +1,9 @@
-import { BoxRelatorio, SectionAddRelatorio, TituloRelatorio, Select, FormularioRelatorio, Date, Time, BotaoCriar } from '../../styled/AddRelatorio.js'
+import { BoxRelatorio, SectionAddRelatorio, TituloRelatorio, Select, FormularioRelatorio, Date, Time, BotaoCriar, ErroAddRelatorio } from '../../styled/AddRelatorio.js'
 import Header from '../../Header/Header.jsx';
 import { IoHomeOutline } from "react-icons/io5";
 import { AiFillExclamationCircle } from "react-icons/ai";
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import axios from 'axios';
 
 
@@ -11,7 +12,7 @@ const AddRelatorio = () => {
   const [data, setData] = useState('')
   const [hora, setHora] = useState('')
   const [error, setError] = useState("")
-
+  const navigate = useNavigate()
 
   const handleForm = async (event) => {
     event.preventDefault();
@@ -47,10 +48,11 @@ const AddRelatorio = () => {
                 Ambiente</option>
               <option>Banheiro</option>
               <option>Sala 01</option>
+              <option>Sala 02</option>
             </Select>
             <Date type="date" name="dataRelatorio" id="dataRelatorio" value={data} onChange={(event) => setData(event.target.value)} />
             <Time type="time" name="horaRelatorio" id="horaRelatorio" value={hora} onChange={(event) => setHora(event.target.value)} />
-            <p>{error && <AiFillExclamationCircle></AiFillExclamationCircle>}{error}</p>
+            <ErroAddRelatorio>{error && <AiFillExclamationCircle></AiFillExclamationCircle>}{error}</ErroAddRelatorio>
             <BotaoCriar type="submit">Enviar</BotaoCriar>
           </FormularioRelatorio>
         </BoxRelatorio>
