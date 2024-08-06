@@ -14,14 +14,12 @@ export const Cores = {
 
 
 export const SectionRelatorios = styled.section`
+margin-top:50px;
 display: flex;
-flex-direction: column;
+flex-wrap: wrap;
 justify-content: center;
 align-items: center;
-`
-
-export const BoxRelatorios = styled.div`
-
+gap: 20px;
 `
 
 export const ConteudoRelatorio = styled.div`

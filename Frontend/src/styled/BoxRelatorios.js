@@ -8,7 +8,8 @@ export const Cores = {
     cianoEscuro: '#005555',
     cianoExtraEscuro: '#004141',
     cinzaSombra: '#0000009c',
-    vermelhoError: '#cc1818'
+    vermelhoError: '#cc1818',
+    cinzaEscuro: '#1C1C1C'
 }
 
 
@@ -20,6 +21,11 @@ width: 55%;
 padding: 20px;
 align-items: start;
 box-shadow:10px 10px 50px ${Cores.cinzaSombra};
+transition: .5s;
+&:hover{
+    transform: scale(1.03);
+    box-shadow:10px 10px 50px ${Cores.cinzaEscuro}
+}
 `
   
 export const NomeAmbiente = styled.p`

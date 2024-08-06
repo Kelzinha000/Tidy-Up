@@ -24,7 +24,7 @@ const AddRelatorio = () => {
           headers: { "Content-Type": "application/json" }
         }
       );
-
+      return navigate("/relatorios")
 
     } catch (error) {
       if (!error?.response) {
@@ -46,6 +46,7 @@ const AddRelatorio = () => {
                 <IoHomeOutline></IoHomeOutline>
                 Ambiente</option>
               <option>Banheiro</option>
+              <option>Sala 01</option>
             </Select>
             <Date type="date" name="dataRelatorio" id="dataRelatorio" value={data} onChange={(event) => setData(event.target.value)} />
             <Time type="time" name="horaRelatorio" id="horaRelatorio" value={hora} onChange={(event) => setHora(event.target.value)} />
