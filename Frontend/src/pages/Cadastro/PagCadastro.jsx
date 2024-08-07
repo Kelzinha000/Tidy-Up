@@ -1,4 +1,4 @@
-import { BoxCadastro, TituloCadastro, SubtitulooCadastro, BoxTitulo, SectionCadastro, BotaoVoltar, BoxBotaoVoltar, IconsNav } from '../../styled/PagCadastro.js'
+import { BoxCadastro, TituloCadastro, SubtitulooCadastro, BoxTitulo, SectionCadastro,ErroCadastro, FormularioCadastro, InputCadastro, BotaoCadastrar,  BotaoVoltar, BoxBotaoVoltar, IconsNav } from '../../styled/PagCadastro.js'
 import IconVoltar from "../../image/Icons/IconVoltar.png"
 import { useState } from 'react';
 import { AiFillExclamationCircle } from "react-icons/ai";
@@ -41,14 +41,14 @@ const Cadastro = () => {
                 <BoxTitulo >
                     <TituloCadastro>Cadastro</TituloCadastro>
                     <SubtitulooCadastro>Funcionários</SubtitulooCadastro>
-                    <form onSubmit={handleCadastro}>
-                        <input type="text" value={nomeFuncionario} onChange={(event) => setNomeFuncionario(event.target.value)} placeholder='Digite o nome do funcionario' />
-                        <input type="password" value={senhaFuncionario} onChange={(event) => setSenhaFuncionario(event.target.value)} placeholder='Digite a senha do funcionario' />
-                        <p>{error && <AiFillExclamationCircle></AiFillExclamationCircle>}{error}</p>
-                        <button type='submit'>
+                    <FormularioCadastro onSubmit={handleCadastro}>
+                        <InputCadastro type="text" value={nomeFuncionario} onChange={(event) => setNomeFuncionario(event.target.value)} placeholder='Digite o nome do funcionario' />
+                        <InputCadastro type="password" value={senhaFuncionario} onChange={(event) => setSenhaFuncionario(event.target.value)} placeholder='Digite a senha do funcionario' />
+                        <ErroCadastro>{error && <AiFillExclamationCircle></AiFillExclamationCircle>}{error}</ErroCadastro>
+                        <BotaoCadastrar type='submit'>
                             Cadastrar
-                        </button>
-                    </form>
+                        </BotaoCadastrar>
+                    </FormularioCadastro>
                 </BoxTitulo >
             </BoxCadastro>
         </SectionCadastro>
