@@ -21,10 +21,10 @@ const Login = () => {
         JSON.stringify({ cpf, password }),
         {
           headers: { "Content-Type": "application/json" },
-        }
+        },
       );
-      setUser(response.data);
 
+      setUser(response.data)
       return navigate("/Home")
 
     } catch (error) {
@@ -44,7 +44,7 @@ const Login = () => {
       />
       <ContainerLogin>
         <div className="Form">
-          {user == null ? (
+          {user === null ? (
             <>
               <div className="login-form" />
               <FormularioLogin className="formulario">
@@ -64,6 +64,7 @@ const Login = () => {
                   required
                   onChange={(event) => setPassword(event.target.value)}
                 />
+                <p>Entrar como Adminstrador</p>
                 <ErroLogin>{error && <AiFillExclamationCircle></AiFillExclamationCircle>}{error}</ErroLogin>
                 <BotaoEntrar
                   type="submit"
@@ -72,6 +73,7 @@ const Login = () => {
                 >
                   Entrar
                 </BotaoEntrar>
+
               </FormularioLogin>
 
             </>

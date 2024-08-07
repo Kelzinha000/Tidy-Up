@@ -11,15 +11,12 @@ app.use(routes);
 
 
 app.post('/', (request, response) => {
-    response.send('Hello World!');	
 });
 
 app.post('/cadastrar', (request, response)=>{
-    response.send("FOIII")
 })
 
 app.post('/relatorio', (request, response)=>{
-    response.send('Testes')
 })
 
 app.listen(3000, ()=>{

@@ -16,6 +16,17 @@ const users = [
   },
 ];
 
+const admins = [
+  {
+    id: 1,
+    name: "Admin",
+    cpf: "adm123",
+    password: "654321",
+  },
+];
+
+
+
 //listar relatorios
 routes.get("/relatorios", (request, response) => {
   lerRelatorio((err, relatorios) => {
@@ -30,6 +41,21 @@ routes.get("/relatorios", (request, response) => {
   })
 })
 
+//lista funcionarios 
+
+routes.get("/funcionarios", (request, response)=>{
+  lerNovofuncionario((err, funcionarios) => {
+    if (err) {
+      response.writeHead(500, { "Content-Type": "application/json" })
+      response.end(JSON.stringify({ message: "Erro ao ler relatorio" }))
+      return
+    }
+    response.writeHead(201, { "Content-Type": "application/json" });
+    response.end(JSON.stringify(funcionarios));
+    return
+  })
+})
+
 //rota login
 
 routes.post("/", (request, response) => {
@@ -37,12 +63,29 @@ routes.post("/", (request, response) => {
   const user = users.find(
     (user) => user.cpf === cpf && user.password === password
   );
+
   //validacao
   if (user) {
     return response.status(200).json({ cpf, password });
   }
   return response.status(401).json({ message: "Usuário ou senha incorretos" });
+
 });
+
+//rota login ADM
+routes.post("/LoginAdm", (request, response)=>{
+  const { cpf, password } = request.body;
+
+  const admin = admins.find(
+    (admin) => admin.cpf === cpf && admin.password === password
+  )
+
+  if (admin) {
+    return response.status(200).json({ cpf, password });
+  }
+
+  return response.status(401).json({ message: "Usuário ou senha incorretos" });
+})
 
 
 //cadastrar relatorios
@@ -87,7 +130,7 @@ routes.post("/relatorio", (request, response) => {
 })
 
 
-//Rota de cadastro
+//Rota de cadastro funcionarios
 routes.post("/cadastrar", (request, response) => {
   let body = request.body
   const { nomeFuncionario, senhaFuncionario } = request.body

@@ -5,6 +5,8 @@ import Home from "./pages/Home/Home.jsx";
 import AddRelatorio from "./pages/AddRelatorio/AddRelatorio.jsx";
 import Relatorios from "./pages/Relatorios/Relatorios.jsx"
 import Perfil from "./pages/Perfil/Perfil.jsx";
+import LoginAdm from "./pages/LoginAdm/LoginAdm.jsx";
+import ListarFuncionarios from "./pages/ListarFuncionarios/ListarFuncionarios.jsx";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
           <Route path="/addRelatorio" element={<AddRelatorio/>}/>
           <Route path="/relatorios" element={<Relatorios/>} />
           <Route path="/perfil" element={<Perfil/>} />
+          <Route path="/LoginAdm" element={<LoginAdm/>} />
+          <Route path="/funcionarios" element={<ListarFuncionarios/>} />
         </Routes>
       </BrowserRouter>
   )
