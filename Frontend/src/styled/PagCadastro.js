@@ -1,8 +1,6 @@
 
 import { styled } from "styled-components";
 
-
-
 export const Cores = {
     cianoMedio:'#006666',
     cianoClaro:'#008584',
@@ -15,7 +13,6 @@ export const Cores = {
      vermelhoError:'#cc1818',
       cinzaEscuro: "#000000"
 }
-
 
 export const SectionCadastro = styled.section`
 display: flex;
