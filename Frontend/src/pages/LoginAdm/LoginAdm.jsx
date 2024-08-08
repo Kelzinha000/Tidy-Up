@@ -61,7 +61,6 @@ const LoginAdm = () => {
                   required
                   onChange={(event) => setPassword(event.target.value)}
                 />
-                <p>Entrar como Adminstrador</p>
                 <ErroLogin>{error && <AiFillExclamationCircle></AiFillExclamationCircle>}{error}</ErroLogin>
                 <BotaoEntrar
                   type="submit"

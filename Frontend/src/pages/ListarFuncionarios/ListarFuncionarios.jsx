@@ -1,7 +1,7 @@
 import Header from "../../Header/Header.jsx";
 import Footer from "../../Footer/Footer.jsx";
-import { SectionRelatorios, ConteudoRelatorio } from "../../styled/Relatorios.js";
-import BoxRelatorio from "../../RelatoriosBox/RelatorioBox.jsx";
+import { SectionRelatorios } from "../../styled/Relatorios.js";
+import ListarFuncionariosBox from "../../ListarFuncionariosBox/ListarFuncionariosBox.jsx";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -24,7 +24,7 @@ const ListarFuncionarios = ({nome, id}) => {
         <>
             <Header />
             <SectionRelatorios>{funcionarios.map((funcionarios) => (
-                <BoxRelatorio />
+                <ListarFuncionariosBox nome={funcionarios.nomeFuncionario} id={funcionarios.id}/>
             ))}</SectionRelatorios>
             <Footer />
         </>

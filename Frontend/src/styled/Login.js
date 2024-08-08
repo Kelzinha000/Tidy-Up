@@ -104,3 +104,12 @@ display: flex;
 align-items: center;
 gap: 5px;
 `
+
+export const EntrarAdm = styled.p`
+color: ${Cores.cianoMedio};
+font-family: "Josefin Sans", sans-serif;
+display: flex;
+align-items: center;
+gap: 5px;
+text-decoration: none;
+`

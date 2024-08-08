@@ -1,9 +1,10 @@
 import ImageHome from "../image/Ilustration/img-LoginHome.png";
-import { ImgHomeStyle, ErroLogin, ContainerLogin, Section1, TituloContainer, BotaoEntrar, InputLogin, FormularioLogin } from "../styled/Login";
+import { ImgHomeStyle, ErroLogin, ContainerLogin, Section1, TituloContainer, BotaoEntrar, InputLogin, FormularioLogin, EntrarAdm } from "../styled/Login";
 import { useState } from "react";
 import axios from "axios";
 import { AiFillExclamationCircle } from "react-icons/ai";
 import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [cpf, setCpf] = useState("");
@@ -64,7 +65,7 @@ const Login = () => {
                   required
                   onChange={(event) => setPassword(event.target.value)}
                 />
-                <p>Entrar como Adminstrador</p>
+                <EntrarAdm><Link to="/LoginAdm">Entrar Como Administrador</Link></EntrarAdm>
                 <ErroLogin>{error && <AiFillExclamationCircle></AiFillExclamationCircle>}{error}</ErroLogin>
                 <BotaoEntrar
                   type="submit"
