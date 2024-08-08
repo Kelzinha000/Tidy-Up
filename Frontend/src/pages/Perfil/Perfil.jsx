@@ -12,7 +12,7 @@ const Perfil = () => {
             <ImgPerfil src={imgPerfil} alt="imagem de perfil do usuario" />
             <InfoFuncionario>
             <NomeFuncionario>Funcionario</NomeFuncionario>
-            <CPFuncionario>000000000</CPFuncionario>
+            <CPFuncionario>CPF: 000000000</CPFuncionario>
             </InfoFuncionario>
         </BoxConteudoFuncionario>
         <BoxHistoriocoRelatorios>

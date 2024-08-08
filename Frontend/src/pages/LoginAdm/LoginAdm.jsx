@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { AiFillExclamationCircle } from "react-icons/ai";
+import { SectionCadastro } from "../../styled/PagCadastro";
 
 
 const LoginAdm = () => {
@@ -24,10 +25,8 @@ const LoginAdm = () => {
             headers: { "Content-Type": "application/json" },
           },
         );
-  
         setAdm(response.data)
         return navigate("/funcionarios")
-  
       } catch (error) {
         if (!error?.response) {
           setError("Erro ao acessar o site");
@@ -36,11 +35,10 @@ const LoginAdm = () => {
         }
       }
     };
-
-
     return (
+      <SectionCadastro>
          <ContainerLogin>
-        <div className="Form">
+        <div >
           {admin === null ? (
             <>
               <div className="login-form" />
@@ -53,7 +51,6 @@ const LoginAdm = () => {
                   required
                   onChange={(event) => setCpf(event.target.value)}
                 />
-
                 <InputLogin
                   type="password"
                   name="password"
@@ -66,12 +63,9 @@ const LoginAdm = () => {
                   type="submit"
                   className="btn-login"
                   onClick={(event) => handleLogin(event)}
-                >
-                  Entrar
+                >Entrar
                 </BotaoEntrar>
-
               </FormularioLogin>
-
             </>
           ) : (
             <div>
@@ -79,6 +73,7 @@ const LoginAdm = () => {
           )}
         </div>
       </ContainerLogin>
+      </SectionCadastro>
     )
 }
 

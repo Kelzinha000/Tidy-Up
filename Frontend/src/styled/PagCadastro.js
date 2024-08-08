@@ -65,7 +65,7 @@ export const BoxBotaoVoltar = styled.div`
 display: flex;
 align-items: center;
 position: fixed;
-top: 60px;
+top: 70px;
 left: 40px;
 `
 export const IconsNav = styled.img`

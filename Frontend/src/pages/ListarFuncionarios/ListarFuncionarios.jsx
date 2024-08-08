@@ -6,7 +6,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 
-const ListarFuncionarios = ({nome, id}) => {
+const ListarFuncionarios = ({nome, id, link, nomelink}) => {
     const [funcionarios, setFuncionarios] = useState([])
     useEffect(() => {
         rederizeFuncionarios()
@@ -22,7 +22,7 @@ const ListarFuncionarios = ({nome, id}) => {
 
     return (
         <>
-            <Header />
+            <Header/>
             <SectionRelatorios>{funcionarios.map((funcionarios) => (
                 <ListarFuncionariosBox nome={funcionarios.nomeFuncionario} id={funcionarios.id}/>
             ))}</SectionRelatorios>

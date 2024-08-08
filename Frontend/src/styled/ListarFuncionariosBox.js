@@ -15,7 +15,7 @@ export const Cores = {
 export const BoxListarFuncionarios = styled.div`
 background-color: ${Cores.branco};
 border-radius: 20px;
-height: 60px;
+height: 70px;
 width: 55%;
 padding: 20px;
 align-items: start;
@@ -29,8 +29,15 @@ transition: .5s;
 export const NomeFuncionario = styled.p`
 font-family: "Josefin Sans", sans-serif;
 font-size: 25px;
+@media screen and (max-width:770px){
+font-size: 20px;
+  }
 `
 
 export const IdFuncionario = styled.p`
 font-family: "Josefin Sans", sans-serif;
+font-size: 15px;
+@media screen and (max-width:770px){
+font-size: 15px;
+  }
 `
