@@ -48,11 +48,12 @@ export const BoxHistoriocoRelatorios = styled.div`
 display: flex;
 flex-direction: column;
 `
-export const NomeFuncionario = styled.h2`
+export const NomeFuncionario = styled.p`
 color: ${Cores.branco};
 font-family: "Josefin Sans", sans-serif;
+font-size: 30px;
 `
-export const CPFuncionario = styled.h2`
+export const CPFuncionario = styled.p`
  font-family: "Josefin Sans", sans-serif;
  color: ${Cores.branco};
 `

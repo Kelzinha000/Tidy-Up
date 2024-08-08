@@ -1,9 +1,12 @@
 import { ErroLogin, ContainerLogin, TituloContainer, BotaoEntrar, InputLogin, FormularioLogin } from "../../styled/Login";
+import { BoxBotaoVoltar, IconsNav } from "../../styled/PagCadastro";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import { AiFillExclamationCircle } from "react-icons/ai";
 import { SectionCadastro } from "../../styled/PagCadastro";
+import IconVoltar from "../../image/Icons/IconVoltar.png"
 
 
 const LoginAdm = () => {
@@ -41,6 +44,11 @@ const LoginAdm = () => {
         <div >
           {admin === null ? (
             <>
+       
+             <BoxBotaoVoltar>
+             <IconsNav src={IconVoltar} alt="" />
+              <Link to="/" className='Link-voltar'>Voltar</Link>
+             </BoxBotaoVoltar>
               <div className="login-form" />
               <FormularioLogin className="formulario">
                 <TituloContainer>Login</TituloContainer>
@@ -66,7 +74,8 @@ const LoginAdm = () => {
                 >Entrar
                 </BotaoEntrar>
               </FormularioLogin>
-            </>
+
+         </>   
           ) : (
             <div>
             </div>
