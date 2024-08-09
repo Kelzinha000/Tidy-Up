@@ -20,6 +20,7 @@ flex-wrap: wrap;
 justify-content: center;
 align-items: center;
 gap: 20px;
+min-height: 42vh;
 `
 
 export const ConteudoRelatorio = styled.div`
