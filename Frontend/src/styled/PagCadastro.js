@@ -29,8 +29,6 @@ height:567px;
 box-shadow: 0 4px 50px ${Cores.cinzaEscuro};
 border-radius: 50px;
 background-color: ${Cores.cianoExtraEscuro};
-
-
 @media screen and (max-width:860px){
    width: 450px;
    height: 490px;
@@ -79,22 +77,29 @@ padding: 50px;
 gap: 15px;
 `
 export const InputCadastro = styled.input`
-color: ${Cores.branco};
-background-color: transparent;
+background-color: ${Cores.branco};
 height: 45px;
 border: none;
+width: 100%;
 outline:0;
+border-radius: 15px;
 border-bottom: solid 3px ${Cores.branco};
 font-family: "Josefin Sans", sans-serif;
 font-weight: 500;
 font-size: 20px;
+@media screen and (max-width:860px){
+   font-size: 25px;
+  }
+  @media screen and (max-width:860px){
+   font-size: 11px;
+  }
 `
 export const BotaoCadastrar = styled.button`
  background-image: linear-gradient(to right,${Cores.cinza}, ${Cores.branco}); 
  color: ${Cores.cianoExtraEscuro};
  font-family: "Josefin Sans", sans-serif;
  border: none;
- padding: 15px;
+ padding: 10px;
  border-radius: 20px;
  font-size: 20px;
  transition: .5s;
