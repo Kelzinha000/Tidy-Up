@@ -69,16 +69,16 @@ h1 {
 }
 
 
-.linksNav{
+.linksNav {
   color: #004141;
-text-decoration: none;
-font-family: "Josefin Sans", sans-serif;
-font-size: 25px;
+  text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
 
 }
 
-.linksNav::after{
-  content:"";
+.linksNav::after {
+  content: "";
   display: block;
   width: 0;
   height: 3px;
@@ -86,52 +86,51 @@ font-size: 25px;
   transition: .3s ease-out;
 }
 
-.linksNav:hover::after{
+.linksNav:hover::after {
   width: 100%;
 }
 
-.linksNav:hover{
-  color:#404040;
-  }
-
-
-.Icons-svg{
-  height: 23px;
-width: 23px;
-color: #f5f5f5;
+.linksNav:hover {
+  color: #404040;
 }
 
 
-.linksNavMobile{
+.Icons-svg {
+  height: 23px;
+  width: 23px;
+  color: #f5f5f5;
+}
+
+
+.linksNavMobile {
   width: 100vh;
   color: #f5f5f5;
   text-decoration: none;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   padding: 15px;
-  
 }
 
-.linkloginADM{
+.linkloginADM {
   color: #004141;
-font-family: "Josefin Sans", sans-serif;
-display: flex;
-align-items: center;
-gap: 5px;
-text-decoration: none;
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
 }
 
-.linkloginADM:hover{
+.linkloginADM:hover {
   color: #404040;
 }
 
-.Link-voltar{
+.Link-voltar {
   font-weight: 400;
-font-family:"Josefin Sans", sans-serif;
-color: #f5f5f5;
-text-decoration: none;
-font-size: 25px;
-padding: 15px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #f5f5f5;
+  text-decoration: none;
+  font-size: 25px;
+  padding: 15px;
 }
 
 
@@ -144,38 +143,42 @@ padding: 15px;
     background-color: #006666;
   }
 }
-.Svg-RelatorioVazio{
+
+.Svg-RelatorioVazio {
   width: 200px;
   height: 200px;
-  color:#4F4F4F;
+  color: #4F4F4F;
   padding: 20px;
-  
-}
-.BotaoCriarRelatorio{
-  background-image: linear-gradient(to right,#006666,  #004141); 
- color:#f5f5f5;
- font-family: "Josefin Sans", sans-serif;
- border: none;
- padding: 20px;
- border-radius: 30px;
- font-size: 20px;
- transition: .5s;
- text-decoration: none;
+
 }
 
-.BotaoCriarRelatorio:hover{
-  background-image: linear-gradient(to right, #4f4f4f, #8a8a8a); 
- }
+.BotaoCriarRelatorio {
+  background-image: linear-gradient(to right, #006666, #004141);
+  color: #f5f5f5;
+  font-family: "Josefin Sans", sans-serif;
+  border: none;
+  padding: 20px;
+  border-radius: 30px;
+  font-size: 20px;
+  transition: .5s;
+  text-decoration: none;
+}
+
+.BotaoCriarRelatorio:hover {
+  background-image: linear-gradient(to right, #4f4f4f, #8a8a8a);
+}
+
 @media screen and (max-width:980px) {
   .svg-abrir {
     display: flex;
   }
-.Svg-RelatorioVazio{
-  width: 150px;
-  height: 150px;
-}
 
-.linksNav{
-  display: none;
-}
+  .Svg-RelatorioVazio {
+    width: 150px;
+    height: 150px;
+  }
+
+  .linksNav {
+    display: none;
+  }
 }

@@ -1,14 +1,14 @@
 import { styled } from "styled-components";
 
 export const Cores = {
-    cianoMedio: '#006666',
-    cianoClaro: '#008584',
-    branco: '#f5f5f5',
-    cinza: '#cccccc',
-    cianoEscuro: '#005555',
-    cianoExtraEscuro: '#004141',
-    cinzaEscuro: '#404040',
-    cinzaSombra: '#0000005c'
+  cianoMedio: '#006666',
+  cianoClaro: '#008584',
+  branco: '#f5f5f5',
+  cinza: '#cccccc',
+  cianoEscuro: '#005555',
+  cianoExtraEscuro: '#004141',
+  cinzaEscuro: '#404040',
+  cinzaSombra: '#0000005c'
 
 
 }

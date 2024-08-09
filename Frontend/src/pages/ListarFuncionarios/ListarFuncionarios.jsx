@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 
-const ListarFuncionarios = ({nome, id, link, nomelink}) => {
+const ListarFuncionarios = ({ nome, id, link, nomelink }) => {
     const [funcionarios, setFuncionarios] = useState([])
     useEffect(() => {
         rederizeFuncionarios()
@@ -24,11 +24,11 @@ const ListarFuncionarios = ({nome, id, link, nomelink}) => {
     return (
         <>
             <Header disabled="titulo" cadastro="Cadastrar">
-            </Header> 
-     
-            
+            </Header>
+
+
             <SectionRelatorios>{funcionarios.map((funcionarios) => (
-                <ListarFuncionariosBox nome={funcionarios.nomeFuncionario} id={funcionarios.id}/>
+                <ListarFuncionariosBox nome={funcionarios.nomeFuncionario} id={funcionarios.id} />
             ))}</SectionRelatorios>
             <Footer />
         </>

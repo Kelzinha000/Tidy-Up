@@ -1,4 +1,4 @@
-import { BoxCadastro, TituloCadastro, SubtitulooCadastro, BoxTitulo, SectionCadastro,ErroCadastro, FormularioCadastro, InputCadastro, BotaoCadastrar,  BotaoVoltar, BoxBotaoVoltar, IconsNav } from '../../styled/PagCadastro.js'
+import { BoxCadastro, TituloCadastro, SubtitulooCadastro, BoxTitulo, SectionCadastro, ErroCadastro, FormularioCadastro, InputCadastro, BotaoCadastrar, BotaoVoltar, BoxBotaoVoltar, IconsNav } from '../../styled/PagCadastro.js'
 import IconVoltar from "../../image/Icons/IconVoltar.png"
 import { useState } from 'react';
 import { AiFillExclamationCircle } from "react-icons/ai";
@@ -36,7 +36,7 @@ const Cadastro = () => {
         <SectionCadastro>
             <BoxBotaoVoltar>
                 <IconsNav src={IconVoltar} alt="" />
-              <Link to="/funcionarios" className='Link-voltar'>Voltar</Link>
+                <Link to="/funcionarios" className='Link-voltar'>Voltar</Link>
             </BoxBotaoVoltar>
             <BoxCadastro>
                 <BoxTitulo >

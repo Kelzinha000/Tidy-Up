@@ -22,7 +22,7 @@ const Relatorios = ({ ambiente, date, time }) => {
 
     return (
         <>
-            <Header titulo={"Criar Relatório"}/>
+            <Header titulo={"Criar Relatório"} />
             <SectionRelatorios>{relatorio.map((relatorio) => (
                 <BoxRelatorio ambiente={relatorio.ambiente} date={relatorio.data} time={relatorio.hora} />
             ))}</SectionRelatorios>

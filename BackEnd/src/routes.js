@@ -26,14 +26,14 @@ const admins = [
   },
 ];
 
-routes.get("/lerRelatorios", (request, response)=>{
-  lerRelatorio((err, relatorios)=>{
+routes.get("/lerRelatorios", (request, response) => {
+  lerRelatorio((err, relatorios) => {
     if (err) {
       response.writeHead(500, { "Content-Type": "application/json" })
       response.end(JSON.stringify({ message: "Erro ao ler relatorio" }))
       return
     }
-    if (relatorios.length === 0){
+    if (relatorios.length === 0) {
       response.writeHead(500, { "Content-Type": "application/json" })
       response.end(JSON.stringify({ message: "Não possui nenhum relatorio" }))
       return
@@ -60,7 +60,7 @@ routes.get("/relatorios", (request, response) => {
 
 //lista funcionarios 
 
-routes.get("/funcionarios", (request, response)=>{
+routes.get("/funcionarios", (request, response) => {
   lerNovofuncionario((err, funcionarios) => {
     if (err) {
       response.writeHead(500, { "Content-Type": "application/json" })
@@ -90,7 +90,7 @@ routes.post("/", (request, response) => {
 });
 
 //rota login ADM
-routes.post("/LoginAdm", (request, response)=>{
+routes.post("/LoginAdm", (request, response) => {
   const { cpf, password } = request.body;
 
   const admin = admins.find(

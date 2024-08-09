@@ -11,44 +11,44 @@ import IconVoltar from "../../image/Icons/IconVoltar.png"
 
 const LoginAdm = () => {
 
-    const [cpf, setCpf] = useState("");
-    const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
-    const [admin, setAdm] = useState(null);
-  
-    const navigate = useNavigate()
-  
-    const handleLogin = async (event) => {
-      event.preventDefault();
-      try {
-        const response = await axios.post(
-          "http://localhost:3000/LoginAdm",
-          JSON.stringify({ cpf, password }),
-          {
-            headers: { "Content-Type": "application/json" },
-          },
-        );
-        setAdm(response.data)
-        return navigate("/funcionarios")
-      } catch (error) {
-        if (!error?.response) {
-          setError("Erro ao acessar o site");
-        } else if (error.response.status === 401) {
-          setError(" Usuário ou senha inválidos",);
-        }
+  const [cpf, setCpf] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const [admin, setAdm] = useState(null);
+
+  const navigate = useNavigate()
+
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/LoginAdm",
+        JSON.stringify({ cpf, password }),
+        {
+          headers: { "Content-Type": "application/json" },
+        },
+      );
+      setAdm(response.data)
+      return navigate("/funcionarios")
+    } catch (error) {
+      if (!error?.response) {
+        setError("Erro ao acessar o site");
+      } else if (error.response.status === 401) {
+        setError(" Usuário ou senha inválidos",);
       }
-    };
-    return (
-      <SectionCadastro>
-         <ContainerLogin>
+    }
+  };
+  return (
+    <SectionCadastro>
+      <ContainerLogin>
         <div >
           {admin === null ? (
             <>
-       
-             <BoxBotaoVoltar>
-             <IconsNav src={IconVoltar} alt="" />
-              <Link to="/" className='Link-voltar'>Voltar</Link>
-             </BoxBotaoVoltar>
+
+              <BoxBotaoVoltar>
+                <IconsNav src={IconVoltar} alt="" />
+                <Link to="/" className='Link-voltar'>Voltar</Link>
+              </BoxBotaoVoltar>
               <div className="login-form" />
               <FormularioLogin className="formulario">
                 <TituloContainer>Login</TituloContainer>
@@ -75,15 +75,15 @@ const LoginAdm = () => {
                 </BotaoEntrar>
               </FormularioLogin>
 
-         </>   
+            </>
           ) : (
             <div>
             </div>
           )}
         </div>
       </ContainerLogin>
-      </SectionCadastro>
-    )
+    </SectionCadastro>
+  )
 }
 
 

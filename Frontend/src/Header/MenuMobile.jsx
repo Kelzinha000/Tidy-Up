@@ -4,6 +4,7 @@ import { ContainerNav, ContentLinks, LogoNavMobile, BoxLink, BackgroundNavMobile
 import imgLogoBranca from "../image/Logo-TidyUp-branca.png"
 import { LuClipboardList } from "react-icons/lu";
 import { LuClipboardSignature } from "react-icons/lu";
+import { FaUserPlus } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { GoHomeFill } from "react-icons/go";
 import { Link } from "react-router-dom";
@@ -16,36 +17,37 @@ const MenuMobile = ({ active }) => {
 
     return (
         <>
-        <ContainerNav menumobile={active}>
-         
-            <FaTimes className="svg-fechar" onClick={fecharMenu} />
-            <ContentLinks>
-                <BoxLink>
-                    <GoHomeFill className="Icons-svg" ></GoHomeFill>
-                    <Link to='/Home' className="linksNavMobile" onClick={fecharMenu}>Home</Link>
-                </BoxLink>
-                <BoxLink>
-                   <LuClipboardSignature className="Icons-svg"></LuClipboardSignature>
-                   <Link to='/addRelatorio' className="linksNavMobile" onClick={fecharMenu}>Criar relatório</Link>
-                </BoxLink>
-                <BoxLink>
-                <LuClipboardList className="Icons-svg"></LuClipboardList>
-                <Link to='/relatorios' className="linksNavMobile"onClick={fecharMenu}>Relatórios</Link>
-                </BoxLink>
-                <BoxLink>
-                    <FaUser className="Icons-svg"></FaUser>
-                    <Link to='/perfil' className="linksNavMobile" onClick={fecharMenu}>Perfil</Link>
-                </BoxLink>
-                
-          
-                   
-                <LogoNavMobile src={imgLogoBranca} alt="" />
+            <ContainerNav menumobile={active}>
 
-            </ContentLinks>
-            
-        </ContainerNav>
-         <BackgroundNavMobile  onClick={fecharMenu}>
-        </BackgroundNavMobile>
+                <FaTimes className="svg-fechar" onClick={fecharMenu} />
+                <ContentLinks>
+                    <BoxLink>
+                        <GoHomeFill className="Icons-svg" ></GoHomeFill>
+                        <Link to='/Home' className="linksNavMobile" onClick={fecharMenu}>Home</Link>
+                    </BoxLink>
+                    <BoxLink>
+                        <LuClipboardSignature className="Icons-svg"></LuClipboardSignature>
+                        <Link to='/addRelatorio' className="linksNavMobile" onClick={fecharMenu}>Criar relatório</Link>
+                    </BoxLink>
+                    <BoxLink>
+                        <LuClipboardList className="Icons-svg"></LuClipboardList>
+                        <Link to='/relatorios' className="linksNavMobile" onClick={fecharMenu}>Relatórios</Link>
+                    </BoxLink>
+                    <BoxLink>
+                        <FaUser className="Icons-svg"></FaUser>
+                        <Link to='/perfil' className="linksNavMobile" onClick={fecharMenu}>Perfil</Link>
+                    </BoxLink>
+                    <BoxLink>
+                        <FaUserPlus className="Icons-svg" />
+                        <Link to='/funcionarios' className="linksNavMobile" onClick={fecharMenu}>Cadastrar Funcionários</Link>
+                    </BoxLink>
+                    <LogoNavMobile src={imgLogoBranca} alt="" />
+
+                </ContentLinks>
+
+            </ContainerNav>
+            <BackgroundNavMobile onClick={fecharMenu}>
+            </BackgroundNavMobile>
         </>
     )
 }

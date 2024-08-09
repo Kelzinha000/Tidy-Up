@@ -27,7 +27,7 @@ transition: .5s;
     box-shadow:10px 10px 50px ${Cores.cinzaEscuro}
 }
 `
-  
+
 export const NomeAmbiente = styled.p`
 font-family: "Josefin Sans", sans-serif;
 font-size: 25px;
@@ -37,6 +37,6 @@ export const TimeRelatorio = styled.p`
 font-family: "Josefin Sans", sans-serif;
 `
 
-export const DateRelatorio =  styled.p`
+export const DateRelatorio = styled.p`
 font-family: "Josefin Sans", sans-serif;
 `

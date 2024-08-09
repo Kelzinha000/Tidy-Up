@@ -9,15 +9,15 @@ import logoMobile from "../../image/LogoTidyUp-mobile.png"
 const Login = () => {
     return (
         <>
-        <HeaderNav>
-        <LogoBox> 
-                <a href="#">
-                    <Logo src={logoImg} alt="Logo Tidy Up" />
-                    <LogoMobile src={logoMobile} alt="Logo Tidy Up" />
-                </a>
-            </LogoBox>
-        </HeaderNav>
-        
+            <HeaderNav>
+                <LogoBox>
+                    <a href="#">
+                        <Logo src={logoImg} alt="Logo Tidy Up" />
+                        <LogoMobile src={logoMobile} alt="Logo Tidy Up" />
+                    </a>
+                </LogoBox>
+            </HeaderNav>
+
             <FormularioLogin />
             <Section02 />
             <Footer />

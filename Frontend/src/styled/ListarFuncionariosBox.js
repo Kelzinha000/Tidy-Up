@@ -1,15 +1,15 @@
 import { styled } from "styled-components"
 
 export const Cores = {
-    cianoMedio: '#006666',
-    cianoClaro: '#008584',
-    branco: '#f5f5f5',
-    cinza: '#cccccc',
-    cianoEscuro: '#005555',
-    cianoExtraEscuro: '#004141',
-    cinzaSombra: '#0000009c',
-    vermelhoError: '#cc1818',
-    cinzaEscuro: '#1C1C1C'
+  cianoMedio: '#006666',
+  cianoClaro: '#008584',
+  branco: '#f5f5f5',
+  cinza: '#cccccc',
+  cianoEscuro: '#005555',
+  cianoExtraEscuro: '#004141',
+  cinzaSombra: '#0000009c',
+  vermelhoError: '#cc1818',
+  cinzaEscuro: '#1C1C1C'
 }
 
 export const BoxListarFuncionarios = styled.div`

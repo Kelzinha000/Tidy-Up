@@ -8,7 +8,7 @@ export const Cores = {
   cianoEscuro: '#005555',
   cianoExtraEscuro: '#004141',
   cinzaSombra: '#0000009c',
-  vermelhoError:'#cc1818'
+  vermelhoError: '#cc1818'
 
 
 }

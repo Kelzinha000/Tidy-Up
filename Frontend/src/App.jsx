@@ -10,18 +10,18 @@ import ListarFuncionarios from "./pages/ListarFuncionarios/ListarFuncionarios.js
 
 const App = () => {
   return (
-      <BrowserRouter>
-        <Routes>
-          <Route path='/cadastro' element={<Cadastro/>} />
-          <Route path='/' element={<Login/>} />
-          <Route path='/Home' element={<Home/>} />
-          <Route path="/addRelatorio" element={<AddRelatorio/>}/>
-          <Route path="/relatorios" element={<Relatorios/>} />
-          <Route path="/perfil" element={<Perfil/>} />
-          <Route path="/LoginAdm" element={<LoginAdm/>} />
-          <Route path="/funcionarios" element={<ListarFuncionarios/>} />
-        </Routes>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/cadastro' element={<Cadastro />} />
+        <Route path='/' element={<Login />} />
+        <Route path='/Home' element={<Home />} />
+        <Route path="/addRelatorio" element={<AddRelatorio />} />
+        <Route path="/relatorios" element={<Relatorios />} />
+        <Route path="/perfil" element={<Perfil />} />
+        <Route path="/LoginAdm" element={<LoginAdm />} />
+        <Route path="/funcionarios" element={<ListarFuncionarios />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

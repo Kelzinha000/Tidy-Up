@@ -9,19 +9,19 @@ app.use(cors())
 app.use(routes);
 
 
-app.get('lerRelatorios', (request, response)=>{
-    
+app.get('lerRelatorios', (request, response) => {
+
 })
 
 app.post('/', (request, response) => {
 });
 
-app.post('/cadastrar', (request, response)=>{
+app.post('/cadastrar', (request, response) => {
 })
 
-app.post('/relatorio', (request, response)=>{
+app.post('/relatorio', (request, response) => {
 })
 
-app.listen(3000, ()=>{
+app.listen(3000, () => {
     console.log('Port 3000 ON')
 });
