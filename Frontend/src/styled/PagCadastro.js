@@ -19,7 +19,6 @@ display: flex;
 justify-content: center;
 align-items: center;
 height: 100vh;
-/* background-image: url(./image/circulo-background.png); */
 @media screen and (max-width:1030px){
    flex-direction: column;
   }
@@ -80,15 +79,15 @@ padding: 50px;
 gap: 15px;
 `
 export const InputCadastro = styled.input`
-background-color: ${Cores.cianoExtraEscuro};
 color: ${Cores.branco};
+background-color: transparent;
 height: 45px;
-border:  none;
+border: none;
 outline:0;
 border-bottom: solid 3px ${Cores.branco};
 font-family: "Josefin Sans", sans-serif;
-font-weight: 200;
-font-size: 15px;
+font-weight: 500;
+font-size: 20px;
 `
 export const BotaoCadastrar = styled.button`
  background-image: linear-gradient(to right,${Cores.cinza}, ${Cores.branco}); 
