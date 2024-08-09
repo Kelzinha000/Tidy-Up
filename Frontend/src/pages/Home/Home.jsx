@@ -36,7 +36,7 @@ const verificarSePossuiRelatorios = () =>{
           <BoxConteudo>
             <LuClipboardX className="Svg-RelatorioVazio"></LuClipboardX>
             <TextRelatorioVazio>Você ainda não apresenta nenhum relatório...</TextRelatorioVazio>
-            <Link to="/addRelatorio">Criar relatório</Link>
+            <Link to="/addRelatorio" className="BotaoCriarRelatorio">Criar relatório</Link>
           </BoxConteudo>
         </BoxRelatorio>
       </SectionRelatorio>

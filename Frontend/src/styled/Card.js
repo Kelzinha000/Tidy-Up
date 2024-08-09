@@ -9,10 +9,7 @@ export const Cores = {
     cianoExtraEscuro: '#004141',
     AzulClaro: '#CBF8FB',
     cinzaSombra: '#0000009c'
-
-
 }
-
 export const BoxCard = styled.div`
 background-color: ${Cores.AzulClaro};
 max-width: 400px;
@@ -34,22 +31,17 @@ margin: 20px;
    }
   }
 `
-
 export const BoxInfoCard = styled.div`
  background-image: linear-gradient(to right,${Cores.cianoClaro}, ${Cores.cianoEscuro}); 
 align-items: center;
 display: flex;
 flex-direction: column;
 padding-bottom: 25px;
-
-
 `
-
 export const ImgCard = styled.img`
 width: 100%;
 height:285px;
 `
-
 export const BoxImgCard = styled.div`
 width: 400px;
 overflow: hidden;
@@ -57,7 +49,6 @@ overflow: hidden;
   height: 250px;
   }
 `
-
 export const TituleCard = styled.h1`
 text-align: center;
 font-size: 45px ;

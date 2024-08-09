@@ -15,8 +15,8 @@ const Footer = () => {
           <LinksFooter href="#">Login</LinksFooter>
         </BoxNav>
         <SocialMidia>
-          <LinksSocial href="#"> <ImgIconsSocial src={ImgInstagram} alt="Logo do Instagram" /></LinksSocial>
-          <LinksSocial href="#"> <ImgIconsSocial src={ImgWhatsApp} alt="Logo do Instagram" /></LinksSocial>
+          <LinksSocial href="#"><ImgIconsSocial src={ImgInstagram} alt="Logo do Instagram"/></LinksSocial>
+          <LinksSocial href="#"><ImgIconsSocial src={ImgWhatsApp} alt="Logo do Instagram"/></LinksSocial>
           <LinksSocial href="#"><ImgIconsSocial src={ImgGitHub} alt="Logo do Instagram" /></LinksSocial>
         </SocialMidia>
       </BoxFooter>
