@@ -12,7 +12,7 @@ const users = [
   {
     id: 1,
     name: "Duda",
-    cpf: "0000000000",
+    cpf: "00000000000",
     password: "123456",
   },
 ];
