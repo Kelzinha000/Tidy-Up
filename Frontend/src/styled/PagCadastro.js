@@ -1,8 +1,6 @@
 
 import { styled } from "styled-components";
 
-
-
 export const Cores = {
     cianoMedio:'#006666',
     cianoClaro:'#008584',
@@ -15,7 +13,6 @@ export const Cores = {
      vermelhoError:'#cc1818',
       cinzaEscuro: "#000000"
 }
-
 
 export const SectionCadastro = styled.section`
 display: flex;
@@ -68,7 +65,7 @@ export const BoxBotaoVoltar = styled.div`
 display: flex;
 align-items: center;
 position: fixed;
-top: 60px;
+top: 70px;
 left: 40px;
 `
 export const IconsNav = styled.img`

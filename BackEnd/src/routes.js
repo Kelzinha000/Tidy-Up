@@ -3,6 +3,7 @@ const fs = require("node:fs");
 const lerRelatorio = require("./lerRelatorio.js")
 const lerNovofuncionario = require("./lerNovofuncionarios.js")
 const { v4: uuidv4 } = require("uuid");
+const { request } = require("node:http");
 
 
 
@@ -15,6 +16,33 @@ const users = [
     password: "123456",
   },
 ];
+
+const admins = [
+  {
+    id: 1,
+    name: "Admin",
+    cpf: "adm123",
+    password: "654321",
+  },
+];
+
+routes.get("/lerRelatorios", (request, response)=>{
+  lerRelatorio((err, relatorios)=>{
+    if (err) {
+      response.writeHead(500, { "Content-Type": "application/json" })
+      response.end(JSON.stringify({ message: "Erro ao ler relatorio" }))
+      return
+    }
+    if (relatorios.length === 0){
+      response.writeHead(500, { "Content-Type": "application/json" })
+      response.end(JSON.stringify({ message: "Não possui nenhum relatorio" }))
+      return
+    }
+    response.writeHead(201, { "Content-Type": "application/json" });
+    response.end()
+  })
+})
+
 
 //listar relatorios
 routes.get("/relatorios", (request, response) => {
@@ -30,6 +58,21 @@ routes.get("/relatorios", (request, response) => {
   })
 })
 
+//lista funcionarios 
+
+routes.get("/funcionarios", (request, response)=>{
+  lerNovofuncionario((err, funcionarios) => {
+    if (err) {
+      response.writeHead(500, { "Content-Type": "application/json" })
+      response.end(JSON.stringify({ message: "Erro ao ler relatorio" }))
+      return
+    }
+    response.writeHead(201, { "Content-Type": "application/json" });
+    response.end(JSON.stringify(funcionarios));
+    return
+  })
+})
+
 //rota login
 
 routes.post("/", (request, response) => {
@@ -37,12 +80,29 @@ routes.post("/", (request, response) => {
   const user = users.find(
     (user) => user.cpf === cpf && user.password === password
   );
+
   //validacao
   if (user) {
     return response.status(200).json({ cpf, password });
   }
   return response.status(401).json({ message: "Usuário ou senha incorretos" });
+
 });
+
+//rota login ADM
+routes.post("/LoginAdm", (request, response)=>{
+  const { cpf, password } = request.body;
+
+  const admin = admins.find(
+    (admin) => admin.cpf === cpf && admin.password === password
+  )
+
+  if (admin) {
+    return response.status(200).json({ cpf, password });
+  }
+
+  return response.status(401).json({ message: "Usuário ou senha incorretos" });
+})
 
 
 //cadastrar relatorios
@@ -87,7 +147,7 @@ routes.post("/relatorio", (request, response) => {
 })
 
 
-//Rota de cadastro
+//Rota de cadastro funcionarios
 routes.post("/cadastrar", (request, response) => {
   let body = request.body
   const { nomeFuncionario, senhaFuncionario } = request.body
@@ -127,38 +187,5 @@ routes.post("/cadastrar", (request, response) => {
 
 })
 
-
-//cadastro
-// routes.post("/cadastrar", (request, response) => {
-//   let body = "";
-//   request.on('data', (chunk)=>{
-//     body += chunk
-//   })
-//   request.on('end', ()=>{
-//     if(!body){
-//         response.status(400).json({ message: "Corpo da apliação vazio" })
-//         return;
-//     }
-//     const novoFuncionario = JSON.parse(body)
-//     lerNovofuncionario((err, funcionarios)=>{
-//         if(err){
-//             response.status(500).json({ message: "Erro ao ler o funcionario" })
-//             return
-//         }
-//         novoFuncionario.id = uuidv4()
-//         funcionarios.push(novoFuncionario)
-
-//         fs.writeFile('funcionarios.json', JSON.stringify(funcionarios, null, 2), ()=>{
-//             if(err){
-//                 response.status(500).json({ message: "Erro ao ler os dados de funcionarios" })
-//                 return
-//             }
-
-//         })
-//         response.status(201).json(novoFuncionario)
-//         return
-//     })
-//   })
-// });
 
 module.exports = routes;

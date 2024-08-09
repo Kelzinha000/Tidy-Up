@@ -9,17 +9,17 @@ app.use(cors())
 app.use(routes);
 
 
+app.get('lerRelatorios', (request, response)=>{
+    
+})
 
 app.post('/', (request, response) => {
-    response.send('Hello World!');	
 });
 
 app.post('/cadastrar', (request, response)=>{
-    response.send("FOIII")
 })
 
 app.post('/relatorio', (request, response)=>{
-    response.send('Testes')
 })
 
 app.listen(3000, ()=>{

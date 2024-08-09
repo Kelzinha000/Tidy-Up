@@ -3,6 +3,7 @@ import IconVoltar from "../../image/Icons/IconVoltar.png"
 import { useState } from 'react';
 import { AiFillExclamationCircle } from "react-icons/ai";
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Cadastro = () => {
     const [nomeFuncionario, setNomeFuncionario] = useState('')
@@ -35,7 +36,7 @@ const Cadastro = () => {
         <SectionCadastro>
             <BoxBotaoVoltar>
                 <IconsNav src={IconVoltar} alt="" />
-                <BotaoVoltar>Voltar</BotaoVoltar>
+              <Link to="/funcionarios" className='Link-voltar'>Voltar</Link>
             </BoxBotaoVoltar>
             <BoxCadastro>
                 <BoxTitulo >

@@ -43,7 +43,7 @@ export const ContainerLogin = styled.div`
 background-color: ${Cores.branco};
 width: 520px;
 min-width: 320px;
-height: 530px;
+height: 500px;
 box-shadow: 0 4px 50px ${Cores.cinzaSombra};
 border-radius: 30px;
 margin: 30px;
@@ -70,7 +70,7 @@ export const FormularioLogin = styled.form`
 display: flex;
 flex-direction: column;
 padding: 50px;
-gap: 20px;
+gap: 15px;
 `
 export const InputLogin = styled.input`
 height: 45px;
@@ -96,11 +96,19 @@ export const BotaoEntrar = styled.button`
   background-image: linear-gradient(to right, ${Cores.cinza}, ${Cores.cinzaSombra}); 
  }
 `
-
 export const ErroLogin = styled.p`
 color: ${Cores.vermelhoError};
 font-family: "Josefin Sans", sans-serif;
 display: flex;
 align-items: center;
 gap: 5px;
+`
+
+export const EntrarAdm = styled.p`
+color: ${Cores.cianoMedio};
+font-family: "Josefin Sans", sans-serif;
+display: flex;
+align-items: center;
+gap: 5px;
+text-decoration: none;
 `

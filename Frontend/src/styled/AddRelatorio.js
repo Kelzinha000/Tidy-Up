@@ -11,8 +11,6 @@ export const Cores = {
     cinzaSombra: '#0000009c',
     vermelhoError: '#cc1818'
 }
-
-
 export const SectionAddRelatorio = styled.section`
 justify-content: center;
 display: flex;
@@ -20,10 +18,7 @@ display: flex;
     justify-content: center;
     display: flex;
 }
-
-
 `
-
 
 export const BoxRelatorio = styled.div`
 width: 633px;
@@ -43,8 +38,6 @@ max-width: 450px;
 max-height: 490px;
 min-width: 0;
 }
-
-
 @media screen and (max-width:750px){
 max-width: 340px;
 max-height:403px;
@@ -56,7 +49,6 @@ padding: 50px;
 color: ${Cores.cianoClaro};
 font-size: 40px;
 `
-
 export const Select = styled.select`
 color: ${Cores.cianoEscuro};
 font-family: "Josefin Sans", sans-serif;
@@ -72,8 +64,6 @@ outline: 0;
 font-size: 30px;
 width:350px
 }
-
-
 @media screen and (max-width:750px){
     font-size: 20px;
     width: 250px;
@@ -87,13 +77,10 @@ gap: 35px;
 @media screen and (max-width:860px){
 gap: 20px
 }
-
-
 @media screen and (max-width:750px){
     gap:10px;
 }
 `
-
 export const Date = styled.input`
 color: ${Cores.cianoEscuro};
 border: none;
@@ -107,14 +94,11 @@ outline: 0;
 font-size: 30px;
 width:350px
 }
-
-
 @media screen and (max-width:750px){
     font-size: 20px;
     width: 250px;
 }
 `
-
 export const Time = styled.input`
 color: ${Cores.cianoEscuro};
 border: none;
@@ -128,14 +112,11 @@ outline: 0;
 font-size: 30px;
 width:350px
 }
-
-
 @media screen and (max-width:750px){
     font-size: 20px;
     width: 250px;
 }
 `
-
 export const BotaoCriar = styled.button`
  background-image: linear-gradient(to right,${Cores.cianoClaro}, ${Cores.cianoEscuro}); 
  color: ${Cores.branco};
@@ -153,9 +134,7 @@ export const BotaoCriar = styled.button`
 padding: 10px;
 font-size: 20px;
 }
-
 `
-
 export const ErroAddRelatorio = styled.p`
 color: ${Cores.vermelhoError};
 font-family: "Josefin Sans", sans-serif;

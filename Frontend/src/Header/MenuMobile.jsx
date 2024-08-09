@@ -34,7 +34,7 @@ const MenuMobile = ({ active }) => {
                 </BoxLink>
                 <BoxLink>
                     <FaUser className="Icons-svg"></FaUser>
-                    <Link to='' className="linksNavMobile" onClick={fecharMenu}>Perfil</Link>
+                    <Link to='/perfil' className="linksNavMobile" onClick={fecharMenu}>Perfil</Link>
                 </BoxLink>
                 
           
