@@ -9,6 +9,9 @@ app.use(cors())
 app.use(routes);
 
 
+app.get('lerRelatorios', (request, response)=>{
+    
+})
 
 app.post('/', (request, response) => {
 });

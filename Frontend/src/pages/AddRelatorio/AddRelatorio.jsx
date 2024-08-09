@@ -37,7 +37,7 @@ const AddRelatorio = () => {
   }
   return (
     <>
-      <Header />
+      <Header titulo={"Criar Relatório"}/>
       <SectionAddRelatorio>
         <BoxRelatorio >
           <TituloRelatorio>Relatório</TituloRelatorio>

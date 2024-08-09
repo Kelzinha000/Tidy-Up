@@ -21,7 +21,11 @@ const Perfil = () => {
     }
     return (
         <>
-            <Header />
+            <Header titulo={"Criar Relatório"}
+            
+            
+            
+            />
             <SectionPerfil>
                 <BoxPerfil>
                     <BoxConteudoFuncionario>

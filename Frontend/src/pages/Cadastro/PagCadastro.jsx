@@ -36,7 +36,7 @@ const Cadastro = () => {
         <SectionCadastro>
             <BoxBotaoVoltar>
                 <IconsNav src={IconVoltar} alt="" />
-              <Link to="/" className='Link-voltar'>Voltar</Link>
+              <Link to="/funcionarios" className='Link-voltar'>Voltar</Link>
             </BoxBotaoVoltar>
             <BoxCadastro>
                 <BoxTitulo >
