@@ -39,7 +39,7 @@ const MenuMobile = ({ active }) => {
                     </BoxLink>
                     <BoxLink>
                         <FaUserPlus className="Icons-svg" />
-                        <Link to='/funcionarios' className="linksNavMobile" onClick={fecharMenu}>Cadastrar Funcionários</Link>
+                        <Link to='/cadastro' className="linksNavMobile" onClick={fecharMenu}>Cadastrar Funcionários</Link>
                     </BoxLink>
                     <LogoNavMobile src={imgLogoBranca} alt="" />
 

@@ -44,6 +44,9 @@ background-color: ${Cores.cianoExtraEscuro};
 export const BoxTitulo = styled.div`
 text-align: center;  
 padding: 40px;
+@media screen and (max-width:860px){
+padding: 5px;
+  }
 `
 export const TituloCadastro = styled.h1`
 font-size: 38px;
@@ -74,6 +77,7 @@ export const FormularioCadastro = styled.form`
 display: flex;
 flex-direction: column;
 padding: 50px;
+align-items: center;
 gap: 15px;
 `
 export const InputCadastro = styled.input`
@@ -82,6 +86,7 @@ height: 45px;
 border: none;
 width: 100%;
 outline:0;
+padding-left: 30px;
 border-radius: 15px;
 border-bottom: solid 3px ${Cores.branco};
 font-family: "Josefin Sans", sans-serif;
@@ -100,15 +105,17 @@ export const BotaoCadastrar = styled.button`
  font-family: "Josefin Sans", sans-serif;
  border: none;
  padding: 10px;
+ width: 200px;
  border-radius: 20px;
  font-size: 20px;
+ font-weight: bold;
  transition: .5s;
  &:hover{
   background-color: ${Cores.cianoClaro};
  }
 `
 export const ErroCadastro = styled.p`
-color: ${Cores.vermelhoError};
+color: ${Cores.branco};
 font-family: "Josefin Sans", sans-serif;
 display: flex;
 align-items: center;
